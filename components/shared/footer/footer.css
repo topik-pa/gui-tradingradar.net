@@ -1,0 +1,11 @@
+footer {
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  color: var(--secondary);
+  padding: var(--x-small-space) 0;
+}
+
+footer a {
+  font-weight: 500;
+}
