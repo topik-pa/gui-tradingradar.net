@@ -8,7 +8,4 @@ module.exports = app => {
   app.get('/contatti', (req, res) => {
     res.render('contatti/contatti', { id: 'contacts', title: 'Contatti' })
   })
-  app.get('*', function (req, res) {
-    res.render('404/404', { id: 'err404', title: 'Error 404' })
-  })
 }

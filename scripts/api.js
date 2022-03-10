@@ -1,15 +1,10 @@
-const endpoint = 'https://www.zeroprojapi.net'
-
 const api = {
-  get: async (path = endpoint) => {
+  get: async (path = '/api/') => {
     const formattedResp = {}
     const params = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      method: 'GET'
     }
-    await fetch(endpoint + path, params)
+    await fetch(path, params)
       .then(resp => {
         formattedResp.status = resp.status
         return resp.json()
@@ -18,16 +13,13 @@ const api = {
       .catch((err) => { console.error(err) })
     return formattedResp
   },
-  post: async (data = {}, path = endpoint) => {
+  post: async (data = {}, path = '/api/') => {
     const formattedResp = {}
     const params = {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
       body: JSON.stringify(data)
     }
-    await fetch(endpoint + path, params)
+    await fetch(path, params)
       .then(resp => {
         formattedResp.status = resp.status
         return resp.json()

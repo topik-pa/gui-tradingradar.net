@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const { I18n } = require('i18n')
 const path = require('path')
+require('dotenv').config()
 const PORT = process.env.PORT || 3000
 
 app.set('views', './views')
@@ -27,10 +28,14 @@ app.use((req, res, next) => {
   next()
 })
 
-// app.locals.NODE_ENV = process.env.NODE_ENV
+// app.locals.X_RAPIDAPI_KEY = process.env.X_RAPIDAPI_KEY
 
 // ROUTES
+require('./routes/stocks.routes')(app)
 require('./routes/app.routes')(app)
+app.get('*', function (req, res) {
+  res.render('404/404', { id: 'err404', title: 'Error 404' })
+})
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
