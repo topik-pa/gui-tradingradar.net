@@ -1,9 +1,11 @@
-import api from '../scripts/api.js'
+// import api from '../scripts/api.js'
+import stocksList from '../components/index/stocks_list/stocks_list.js'
 
-const home = {
-  init: () => {
-    api.get('/api/stocks')
+const index = {
+  init: async () => {
+    // const stocksReq = await api.get('/api/stocks')
+    stocksList.init()
   }
 }
 
-export default home
+export default index

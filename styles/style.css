@@ -18,6 +18,7 @@
 @import "/components/shared/goto_top/goto_top.css";
 @import "/components/shared/disclaimer/disclaimer.css";
 
+@import "/components/index/stocks_list/stocks_list.css";
 @import "/views/404/404.css";
 
 @import "./responsive.css";

@@ -1,0 +1,62 @@
+#stocks_list .sources {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: var(--large-space);
+}
+
+#stocks_list .sources .source {
+  display: flex;
+  flex-direction: column;
+  width: 7%;
+  text-align: center;
+  font-size: var(--font-size-small);
+  margin-right: var(--x-small-space);
+}
+
+#stocks_list .sources .source img {
+  border: 1px solid black;
+  width: 50%;
+  margin: var(--x-small-space) 25%;
+}
+
+
+
+#stocks_list .alphabet {
+  text-align: center;
+}
+
+#stocks_list .alphabet span {
+  font-size: var(--font-size-big);
+  font-weight: 500;
+  margin: var(--normal-space);
+  display: inline-block;
+  cursor: pointer;
+}
+#stocks_list .alphabet span.disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+
+#stocks_list .stocks {
+  display: flex;
+  justify-content: center;
+}
+
+#stocks_list .stocks .stock {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 7%;
+  margin: var(--normal-space);
+  font-weight: 500;
+}
+#stocks_list .stocks .stock:hover span {
+  filter: brightness(90%);
+}
+
+#stocks_list .stocks .stock img {
+  margin: var(--x-small-space) 25%;
+  width: 50%;
+  border: 1px solid black;
+}
