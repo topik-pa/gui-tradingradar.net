@@ -1,14 +1,17 @@
 h1 {
   font-size: var(--font-size-biggest);
   letter-spacing: .1rem;
+  margin-bottom: var(--large-space);
 }
 h2 {
   font-size: var(--font-size-huge);
   letter-spacing: .1rem;
+  margin-bottom: var(--normal-space);
 }
 h3 {
   font-size: var(--font-size-bigger);
   letter-spacing: .1rem;
+  margin: var(--large-space) 0 var(--small-space);
 }
 h4 {
   font-size: var(--font-size-big);

@@ -17,3 +17,19 @@ a {
 em {
   font-weight: 500;
 }
+
+p {
+  margin-bottom: var(--x-small-space);
+}
+
+main {
+  padding: 0 var(--view-padding);
+}
+
+main section {
+  margin: 1rem 0;
+}
+
+.hide {
+  display: none!important;
+}

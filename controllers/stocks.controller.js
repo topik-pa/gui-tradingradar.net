@@ -1,4 +1,4 @@
-const http = require('https')
+const https = require('https')
 const options = {
   hostname: 'tradingradar.p.rapidapi.com',
   port: null,
@@ -14,7 +14,7 @@ const options = {
 exports.getStocksList = async (req, res) => {
   options.method = 'GET'
 
-  const request = http.request(options, function (response) {
+  const request = https.request(options, function (response) {
     const chunks = []
 
     response.on('data', function (chunk) {
