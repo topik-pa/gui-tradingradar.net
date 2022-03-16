@@ -8,18 +8,9 @@
   display: flex;
   flex-direction: column;
   width: 7%;
-  text-align: center;
   font-size: var(--font-size-small);
   margin-right: var(--x-small-space);
 }
-
-#stocks_list .sources .source img {
-  border: 1px solid black;
-  width: 50%;
-  margin: var(--x-small-space) 25%;
-}
-
-
 
 #stocks_list .alphabet {
   text-align: center;
