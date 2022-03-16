@@ -1,0 +1,25 @@
+#api_list .category{
+  display: flex;
+  align-items: center;
+}
+
+#api_list .list {
+  width: 50%;
+  margin-right: var(--xx-large-space)
+}
+
+#api_list .list ul {
+  height: var(--scrollable-section);
+  overflow-y: scroll;
+  margin: var(--small-space) 0 var(--xx-large-space);
+}
+
+#api_list .list ul li{
+  padding: var(--x-small-space);
+  display: flex;
+  justify-content: space-between;
+}
+
+#api_list .list ul li:nth-child(odd) {
+  background-color: var(--light-gray);
+}

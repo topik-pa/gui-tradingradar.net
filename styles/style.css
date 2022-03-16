@@ -20,6 +20,7 @@
 
 @import "/views/index.css";
 @import "/components/index/stocks_list/stocks_list.css";
+@import "/components/index/api_list/api_list.css";
 @import "/views/404/404.css";
 
 @import "./responsive.css";
