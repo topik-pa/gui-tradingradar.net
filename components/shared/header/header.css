@@ -3,6 +3,7 @@ header section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--light-gray);
 }
 
 header section:nth-child(1) {

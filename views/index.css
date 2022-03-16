@@ -1,0 +1,6 @@
+#home main section {
+  padding: var(--view-padding) var(--view-padding) 0;
+}
+#home main section:nth-child(even) {
+  background-color: var(--lighter-gray);
+}

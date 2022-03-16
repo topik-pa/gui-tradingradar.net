@@ -1,7 +1,6 @@
 h1 {
   font-size: var(--font-size-biggest);
   letter-spacing: .1rem;
-  margin-bottom: var(--large-space);
 }
 h2 {
   font-size: var(--font-size-huge);

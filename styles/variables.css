@@ -40,6 +40,7 @@
 
   --view-padding: var(--large-space);
   --section-margin: var(--xx-large-space);
+  --scrollable-section: calc(var(--large-space) * 10);
 
   /* BORDER RADIUS */
   --border-radius-small: .3rem;
