@@ -43,6 +43,7 @@ async function callTheApi () {
     }
     printApiStocksInPage(apiCall)
   }
+  return apiCallList
 }
 
 function printApiStocksInPage (api) {
@@ -68,8 +69,8 @@ function printApiStocksInPage (api) {
 }
 
 const apiList = {
-  init: async () => {
-    callTheApi()
+  init: () => {
+    return callTheApi()
   }
 }
 
