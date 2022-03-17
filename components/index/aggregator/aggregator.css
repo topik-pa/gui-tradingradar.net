@@ -1,0 +1,26 @@
+#aggregator > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#aggregator h3 {
+  text-align: center;
+}
+
+#aggregator img {
+  max-width: 10rem;
+}
+
+#aggregator .aggregator {
+  text-align: center;
+  width: 33.3%;
+}
+
+#aggregator p {
+  margin-top: 1rem;
+}
+
+#aggregator span {
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
