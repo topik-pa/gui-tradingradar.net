@@ -1,11 +1,6 @@
-#api_list .category{
-  display: flex;
-  flex-direction: column;
-}
-
 #api_list .list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 #api_list .list h4 {
   text-align: center;

@@ -32,9 +32,16 @@
     }
   ]
 section(id="api_list")
-  h2 Classifiche dei titoli del FTSE Mib secondo i principali indicatori di Analisi Tecnica 
+  h2 Classifiche dei titoli del FTSE Mib secondo i principali indicatori di Analisi Tecnica
+  p I dati seguenti sono disponibili tramite le #[a(href="https://rapidapi.com/marcopavanmp-R024fyPhqP6/api/tradingradar", title="API di tradingradar.net") API di tradingradar.net] con le seguenti funzionalità.
+      ul 
+        li Dati aggiornati quotidianamente 
+        li Dati ordinabili per valore ascendente o discendente 
+        li Filtraggio dei dati 
+        li Paginazione dei dati
+  p Gli sviluppatori interessati possono accedere alle API tramite il servizio fornito da #[a(href="https://rapidapi.com", title="RapidAPI") RapidAPI].
   h3 Performance a 1 mese / 6 mesi / 1 anno dei titoli del FTSE Mib
-  div(id="performance", class="category")
+  div(id="performance")
     div(class="list")
       div(class="perf1M")
         h4 Performance 1 mese
@@ -48,17 +55,31 @@ section(id="api_list")
     div(class="desc") 
       p Fonte: Borsa Italiana
       p Performance a 1 mese / 6 mesi / 1 anno dei titoli del FTSE Mib...
-      h5 tradingradar.net API
-      p Le #[a(href="https://rapidapi.com/marcopavanmp-R024fyPhqP6/api/tradingradar", title="API di tradingradar.net") API di tradingradar.net] forniscono i dati sulle performance con le seguenti funzionalità
-      ul 
-        li Dati aggiornati quotidianamente 
-        li Dati ordinabili per valore ascendente o discendente 
-        li Filtraggio dei dati 
-        li Paginazione dei dati
-  div(id="volatility", class="category")
-  div(id="rsi", class="category")
-  div(id="rating", class="category")
-  div(id="tendency", class="category")
-  div(id="dividend", class="category")
-  div(id="target", class="category")
+  h3 Volatilità, Relative Strenght Index (RSI) e Tendenza a breve termine
+  div(id="volatility")
+    div(class="list")
+      div(class="volatility")
+        h4 Volatilità
+        ul
+      div(class="mfRsi")
+        h4 Relative Strenght Index (RSI)
+        ul
+      div(class="shortTendency")
+        h4 Tendenza a breve termine
+        ul
+    div(class="desc") 
+      p Fonte: Borsa Italiana, Milano Finanza e Il Sole 24 Ore
+      p I titoli del FTSE Mib ordinati per volatilità...
+  h3 Dividendi e Raccomandazioni delle banche di affari
+  div(id="dividend")
+    div(class="list")
+      div(class="divYield")
+        h4 Dividendo
+        ul
+      div(class="lastJudgment")
+        h4 Raccomandazione
+        ul
+    div(class="desc") 
+      p Fonte: Milano Finanza e SoldiOnLine
+      p I titoli del FTSE Mib ordinati per valore del dividendo e raccomandazione data dalle principali banche di affari...      
 

@@ -5,25 +5,73 @@ const cls = ['idle', 'loading', 'success', 'error']
 const apiCallList = [
   {
     id: 0,
-    category: 'performance',
+    category: 'first',
     name: 'perf1M',
+    key: 'perf1M',
     qp: 'order=desc',
     stocks: undefined,
     status: 'idle'
   },
   {
     id: 1,
-    category: 'performance',
+    category: 'first',
     name: 'perf6M',
+    key: 'perf6M',
     qp: 'order=desc',
     stocks: undefined,
     status: 'idle'
   },
   {
     id: 2,
-    category: 'performance',
+    category: 'first',
     name: 'perf1Y',
+    key: 'perf1Y',
     qp: 'order=desc',
+    stocks: undefined,
+    status: 'idle'
+  },
+  {
+    id: 3,
+    category: 'second',
+    name: 'volatility',
+    key: 'volatility',
+    qp: 'order=desc',
+    stocks: undefined,
+    status: 'idle'
+  },
+  {
+    id: 4,
+    category: 'second',
+    name: 'mfRsi',
+    key: 'milFin_rsi',
+    qp: 'order=desc',
+    stocks: undefined,
+    status: 'idle'
+  },
+  {
+    id: 5,
+    category: 'second',
+    name: 'shortTendency',
+    key: 'sol24_shortTendency',
+    qp: 'order=asc',
+    stocks: undefined,
+    status: 'idle'
+  },
+  {
+    id: 6,
+    category: 'third',
+    name: 'divYield',
+    key: 'divYield',
+    qp: 'order=desc',
+    stocks: undefined,
+    status: 'idle'
+  },
+  {
+    id: 7,
+    category: 'third',
+    name: 'lastJudgment',
+    key: 'lastJudgment',
+    qp: '',
     stocks: undefined,
     status: 'idle'
   }
@@ -59,7 +107,7 @@ function printApiStocksInPage (api) {
       $a.title = a.name
       $a.href = `/analisi/${encodeURI(a.name.toLowerCase())}?isin=${a.isin}`
       const $span = document.createElement('span')
-      $span.innerText = a[api.name].value
+      $span.innerText = a[api.key].value
       $li.appendChild($a)
       $li.appendChild($span)
       $ul.appendChild($li)
