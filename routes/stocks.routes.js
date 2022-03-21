@@ -19,5 +19,11 @@ module.exports = app => {
   router.get('/stocks/divYield', stocks.getStocksList)
   router.get('/stocks/lastJudgment', stocks.getStocksList)
 
+  // GET ratings, med tendency and rsi stocks list
+  router.get('/stocks/rating', stocks.getStocksList)
+  router.get('/stocks/mfRanking', stocks.getStocksList)
+  router.get('/stocks/mediumTendency', stocks.getStocksList)
+  router.get('/stocks/rsi', stocks.getStocksList)
+
   app.use('/api', router)
 }

@@ -1,0 +1,43 @@
+#filters .list {
+  display: flex;
+  justify-content: space-around;
+}
+
+#filters .list > div {
+  width: 30%;
+}
+
+#filters .list h4 {
+  text-align: center;
+}
+
+#filters .list ul {
+  height: var(--scrollable-section);
+  overflow-y: scroll;
+  margin: var(--xx-small-space) 0 var(--large-space);
+}
+
+#filters .list ul li {
+  padding: var(--x-small-space);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+#filters .list ul li:nth-child(1) {
+  font-size: var(--font-size-very-small);
+}
+
+#filters .list ul li *:nth-child(1) {
+  width: 70%;
+}
+#filters .list ul li *:nth-child(2) {
+  width: 15%;
+}
+#filters .list ul li *:nth-child(3) {
+  width: 15%;
+}
+
+#filters .list ul li:nth-child(odd) {
+  background-color: var(--light-gray);
+}
