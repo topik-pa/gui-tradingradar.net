@@ -2,37 +2,6 @@ import api from '../../../scripts/api.js'
 const $root = document.getElementById('filters')
 const cls = ['idle', 'loading', 'success', 'error']
 
-const apiCallList = [
-  {
-    name: 'rating',
-    key: 'borsaIt_rating',
-    qp: 'order=desc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    name: 'mfRanking',
-    key: 'milFin_mfRanking',
-    qp: 'order=asc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    name: 'mediumTendency',
-    key: 'sol24_mediumTendency',
-    qp: 'order=asc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    name: 'rsi',
-    key: 'borsaIt_rsi',
-    qp: 'order=desc',
-    stocks: undefined,
-    status: 'idle'
-  }
-]
-
 const addedFilters = {
   ratings: {
     key1: 'borsaIt_rating',
@@ -64,8 +33,14 @@ const addedFilters = {
   }
 }
 
-async function callTheApi () {
-  for (const apiCall of apiCallList) {
+async function callTheApi (apis) {
+  for (const apiCall of apis) {
+    if (apiCall.category !== 'filters') {
+      continue
+    }
+    if (apiCall.status !== 'idle') {
+      continue
+    }
     apiCall.status = 'loading'
     try {
       const request = await api.get(`api/stocks/${apiCall.name}/?${apiCall.qp}`)
@@ -76,8 +51,13 @@ async function callTheApi () {
       console.error(error)
     }
   }
-  return apiCallList
 }
+
+/* function updateUIStatus (apiCall) {
+  const $wrap = $root.getElementsByClassName(apiCall.name)[0]
+  $wrap.classList.remove(...cls)
+  $wrap.classList.add(apiCall.status)
+} */
 
 function printApiFiltersInPage (filter) {
   const $wrap = $root.getElementsByClassName(filter.class)[0]
@@ -105,7 +85,7 @@ function printApiFiltersInPage (filter) {
 }
 
 const filters = {
-  init: async (apiListWStocks) => {
+  init: async (apis) => {
     addedFilters.ratings.status = 'loading'
     addedFilters.judgments.status = 'loading'
     addedFilters.overbought.status = 'loading'
@@ -115,31 +95,31 @@ const filters = {
     printApiFiltersInPage(addedFilters.overbought)
     printApiFiltersInPage(addedFilters.oversold)
 
-    await callTheApi()
+    await callTheApi(apis)
 
     addedFilters.ratings.status = 'success'
     addedFilters.judgments.status = 'success'
     addedFilters.overbought.status = 'success'
     addedFilters.oversold.status = 'success'
 
-    apiListWStocks = apiListWStocks.concat(apiCallList)
+    // apiListWStocks = apiListWStocks.concat(apiCallList)
 
-    const BIRatings = apiListWStocks.filter((api) => {
+    const BIRatings = apis.filter((api) => {
       return api.name === 'rating'
     })
-    const MFRatings = apiListWStocks.filter((api) => {
+    const MFRatings = apis.filter((api) => {
       return api.name === 'mfRanking'
     })
-    const lastJudgment = apiListWStocks.filter((api) => {
+    const lastJudgment = apis.filter((api) => {
       return api.name === 'lastJudgment'
     })
-    const medTendency = apiListWStocks.filter((api) => {
+    const medTendency = apis.filter((api) => {
       return api.name === 'mediumTendency'
     })
-    const biRSI = apiListWStocks.filter((api) => {
+    const biRSI = apis.filter((api) => {
       return api.name === 'rsi'
     })
-    const mfRSI = apiListWStocks.filter((api) => {
+    const mfRSI = apis.filter((api) => {
       return api.name === 'mfRsi'
     })
 
@@ -164,9 +144,6 @@ const filters = {
         }
       }
     }
-
-    console.log(biRSI)
-    console.log(mfRSI)
 
     for (const stockA of biRSI[0].stocks) {
       if (stockA[biRSI[0].key].value > 20) {

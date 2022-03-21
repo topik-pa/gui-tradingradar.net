@@ -2,77 +2,17 @@ import api from '../../../scripts/api.js'
 const $root = document.getElementById('api_list')
 const cls = ['idle', 'loading', 'success', 'error']
 
-const apiCallList = [
-  {
-    category: 'first',
-    name: 'perf1M',
-    key: 'perf1M',
-    qp: 'order=desc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    category: 'first',
-    name: 'perf6M',
-    key: 'perf6M',
-    qp: 'order=desc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    category: 'first',
-    name: 'perf1Y',
-    key: 'perf1Y',
-    qp: 'order=desc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    category: 'second',
-    name: 'volatility',
-    key: 'volatility',
-    qp: 'order=desc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    category: 'second',
-    name: 'mfRsi',
-    key: 'milFin_rsi',
-    qp: 'order=desc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    category: 'second',
-    name: 'shortTendency',
-    key: 'sol24_shortTendency',
-    qp: 'order=asc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    category: 'third',
-    name: 'divYield',
-    key: 'divYield',
-    qp: 'order=desc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    category: 'third',
-    name: 'lastJudgment',
-    key: 'lastJudgment',
-    qp: '',
-    stocks: undefined,
-    status: 'idle'
-  }
-]
-
-async function callTheApi () {
-  for (const apiCall of apiCallList) {
+async function callTheApi (apis) {
+  for (const apiCall of apis) {
+    if (apiCall.category !== 'api') {
+      continue
+    }
+    if (apiCall.status !== 'idle') {
+      printApiStocksInPage(apiCall)
+      continue
+    }
     apiCall.status = 'loading'
-    printApiStocksInPage(apiCall)
+    updateUIStatus(apiCall)
     try {
       const request = await api.get(`api/stocks/${apiCall.name}/?${apiCall.qp}`)
       apiCall.stocks = request.body
@@ -81,25 +21,29 @@ async function callTheApi () {
       apiCall.status = 'error'
       console.error(error)
     }
+    updateUIStatus(apiCall)
     printApiStocksInPage(apiCall)
   }
-  return apiCallList
 }
 
-function printApiStocksInPage (api) {
-  const $wrap = $root.getElementsByClassName(api.name)[0]
+function updateUIStatus (apiCall) {
+  const $wrap = $root.getElementsByClassName(apiCall.name)[0]
   $wrap.classList.remove(...cls)
-  $wrap.classList.add(api.status)
-  if (api.stocks) {
+  $wrap.classList.add(apiCall.status)
+}
+
+function printApiStocksInPage (apiCall) {
+  if (apiCall.stocks) {
+    const $wrap = $root.getElementsByClassName(apiCall.name)[0]
     const $ul = $wrap.getElementsByTagName('ul')[0]
-    for (const a of api.stocks) {
+    for (const a of apiCall.stocks) {
       const $li = document.createElement('li')
       const $a = document.createElement('a')
       $a.innerText = a.name
       $a.title = a.name
       $a.href = `/analisi/${encodeURI(a.name.toLowerCase())}?isin=${a.isin}`
       const $span = document.createElement('span')
-      $span.innerText = a[api.key].value
+      $span.innerText = a[apiCall.key].value
       $li.appendChild($a)
       $li.appendChild($span)
       $ul.appendChild($li)
@@ -109,8 +53,8 @@ function printApiStocksInPage (api) {
 }
 
 const apiList = {
-  init: () => {
-    return callTheApi()
+  init: async (apis) => {
+    await callTheApi(apis)
   }
 }
 
