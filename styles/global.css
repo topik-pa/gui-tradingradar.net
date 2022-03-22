@@ -27,7 +27,8 @@ p {
 }*/
 
 main section {
-  margin-top: var(--section-margin)
+  margin-top: var(--section-margin);
+  padding: var(--view-padding) var(--view-padding) 0;
 }
 
 .hide {
