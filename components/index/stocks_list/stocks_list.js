@@ -1,8 +1,4 @@
-
-const $root = document.getElementById('stocks_list')
-const $alphabet = $root.getElementsByClassName('alphabet')[0]
-const $stocks = $root.getElementsByClassName('stocks')[0]
-const activeLetters = new Set()
+let $root, $alphabet, $stocks, activeLetters
 
 function manageAlphabetClicks () {
   const letters = $alphabet.querySelectorAll('span')
@@ -31,6 +27,10 @@ function alphabetShowHideStocks (letter = 'A') {
 
 const stocksList = {
   init: () => {
+    $root = document.getElementById('stocks_list')
+    $alphabet = $root.getElementsByClassName('alphabet')[0]
+    $stocks = $root.getElementsByClassName('stocks')[0]
+    activeLetters = new Set()
     alphabetShowHideStocks()
     manageAlphabetClicks()
   }

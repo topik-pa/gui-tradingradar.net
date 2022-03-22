@@ -1,6 +1,5 @@
 import api from '../../../scripts/api.js'
-const $root = document.getElementById('api_list')
-const cls = ['idle', 'loading', 'success', 'error']
+let $root, cls
 
 async function callTheApi (apis) {
   for (const apiCall of apis) {
@@ -54,6 +53,9 @@ function printApiStocksInPage (apiCall) {
 
 const apiList = {
   init: async (apis) => {
+    $root = document.getElementById('api_list')
+    cls = ['idle', 'loading', 'success', 'error']
+
     await callTheApi(apis)
   }
 }

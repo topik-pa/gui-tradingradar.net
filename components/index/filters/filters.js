@@ -1,37 +1,5 @@
 import api from '../../../scripts/api.js'
-const $root = document.getElementById('filters')
-const cls = ['idle', 'loading', 'success', 'error']
-
-const addedFilters = {
-  ratings: {
-    key1: 'borsaIt_rating',
-    key2: 'milFin_mfRanking',
-    class: 'ranking',
-    status: 'idle',
-    stocks: []
-  },
-  judgments: {
-    key1: 'lastJudgment',
-    key2: 'sol24_mediumTendency',
-    class: 'judgment',
-    status: 'idle',
-    stocks: []
-  },
-  overbought: {
-    key1: 'borsaIt_rsi',
-    key2: 'milFin_rsi',
-    class: 'overbought',
-    status: 'idle',
-    stocks: []
-  },
-  oversold: {
-    key1: 'borsaIt_rsi',
-    key2: 'milFin_rsi',
-    class: 'oversold',
-    status: 'idle',
-    stocks: []
-  }
-}
+let $root, cls, addedFilters
 
 async function callTheApi (apis) {
   for (const apiCall of apis) {
@@ -86,6 +54,39 @@ function printApiFiltersInPage (filter) {
 
 const filters = {
   init: async (apis) => {
+    $root = document.getElementById('filters')
+    cls = ['idle', 'loading', 'success', 'error']
+    addedFilters = {
+      ratings: {
+        key1: 'borsaIt_rating',
+        key2: 'milFin_mfRanking',
+        class: 'ranking',
+        status: 'idle',
+        stocks: []
+      },
+      judgments: {
+        key1: 'lastJudgment',
+        key2: 'sol24_mediumTendency',
+        class: 'judgment',
+        status: 'idle',
+        stocks: []
+      },
+      overbought: {
+        key1: 'borsaIt_rsi',
+        key2: 'milFin_rsi',
+        class: 'overbought',
+        status: 'idle',
+        stocks: []
+      },
+      oversold: {
+        key1: 'borsaIt_rsi',
+        key2: 'milFin_rsi',
+        class: 'oversold',
+        status: 'idle',
+        stocks: []
+      }
+    }
+
     addedFilters.ratings.status = 'loading'
     addedFilters.judgments.status = 'loading'
     addedFilters.overbought.status = 'loading'

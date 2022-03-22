@@ -1,103 +1,5 @@
 // import api from '../../../scripts/api.js'
-const $root = document.getElementById('aggregator')
-const aggregators = {
-  performance: {
-    id: 0,
-    name: 'perf1M',
-    class: 'performance',
-    stocks: undefined,
-    value: undefined,
-    get iconValue () {
-      let iconValue
-      switch (true) {
-      case (this.value > 10):
-        iconValue = 5
-        break
-      case (this.value > 5 && this.value <= 10):
-        iconValue = 4
-        break
-      case (this.value >= 0 && this.value <= 5):
-        iconValue = 3
-        break
-      case (this.value < 0 && this.value >= -5):
-        iconValue = 2
-        break
-      case (this.value < -5 && this.value >= -10):
-        iconValue = 1
-        break
-      case (this.value < -10):
-        iconValue = 0
-        break
-      default:
-        iconValue = ''
-        break
-      }
-      return `/assets/images/gauge/gauge_${iconValue}-min.png`
-    }
-  },
-  volatility: {
-    id: 1,
-    name: 'volatility',
-    class: 'volatility',
-    stocks: undefined,
-    value: undefined,
-    get iconValue () {
-      let iconValue
-      switch (true) {
-      case (this.value > 70):
-        iconValue = 5
-        break
-      case (this.value > 56):
-        iconValue = 4
-        break
-      case (this.value > 44):
-        iconValue = 3
-        break
-      case (this.value > 32):
-        iconValue = 2
-        break
-      case (this.value > 20):
-        iconValue = 1
-        break
-      default:
-        iconValue = 0
-        break
-      }
-      return `/assets/images/gauge/gauge_${iconValue}-min.png`
-    }
-  },
-  tendency: {
-    id: 2,
-    name: 'tendency',
-    class: 'tendency',
-    stocks: undefined,
-    value: undefined,
-    get iconValue () {
-      let iconValue
-      switch (true) {
-      case (this.value < 1.2):
-        iconValue = 5
-        break
-      case (this.value < 1.7):
-        iconValue = 4
-        break
-      case (this.value < 2.5):
-        iconValue = 3
-        break
-      case (this.value < 3.8):
-        iconValue = 2
-        break
-      case (this.value < 5.9):
-        iconValue = 1
-        break
-      default:
-        iconValue = 0
-        break
-      }
-      return `/assets/images/gauge/gauge_${iconValue}-min.png`
-    }
-  }
-}
+let $root, aggregators
 
 function setAggregatorValue (aggregator) {
   let value = 0
@@ -131,7 +33,106 @@ function printAggregatorValue (aggregator) {
 
 const aggregator = {
   init: (apiListWStocks) => {
-    console.log(apiListWStocks)
+    $root = document.getElementById('aggregator')
+    aggregators = {
+      performance: {
+        id: 0,
+        name: 'perf1M',
+        class: 'performance',
+        stocks: undefined,
+        value: undefined,
+        get iconValue () {
+          let iconValue
+          switch (true) {
+          case (this.value > 10):
+            iconValue = 5
+            break
+          case (this.value > 5 && this.value <= 10):
+            iconValue = 4
+            break
+          case (this.value >= 0 && this.value <= 5):
+            iconValue = 3
+            break
+          case (this.value < 0 && this.value >= -5):
+            iconValue = 2
+            break
+          case (this.value < -5 && this.value >= -10):
+            iconValue = 1
+            break
+          case (this.value < -10):
+            iconValue = 0
+            break
+          default:
+            iconValue = ''
+            break
+          }
+          return `/assets/images/gauge/gauge_${iconValue}-min.png`
+        }
+      },
+      volatility: {
+        id: 1,
+        name: 'volatility',
+        class: 'volatility',
+        stocks: undefined,
+        value: undefined,
+        get iconValue () {
+          let iconValue
+          switch (true) {
+          case (this.value > 70):
+            iconValue = 5
+            break
+          case (this.value > 56):
+            iconValue = 4
+            break
+          case (this.value > 44):
+            iconValue = 3
+            break
+          case (this.value > 32):
+            iconValue = 2
+            break
+          case (this.value > 20):
+            iconValue = 1
+            break
+          default:
+            iconValue = 0
+            break
+          }
+          return `/assets/images/gauge/gauge_${iconValue}-min.png`
+        }
+      },
+      tendency: {
+        id: 2,
+        name: 'tendency',
+        class: 'tendency',
+        stocks: undefined,
+        value: undefined,
+        get iconValue () {
+          let iconValue
+          switch (true) {
+          case (this.value < 1.2):
+            iconValue = 5
+            break
+          case (this.value < 1.7):
+            iconValue = 4
+            break
+          case (this.value < 2.5):
+            iconValue = 3
+            break
+          case (this.value < 3.8):
+            iconValue = 2
+            break
+          case (this.value < 5.9):
+            iconValue = 1
+            break
+          default:
+            iconValue = 0
+            break
+          }
+          return `/assets/images/gauge/gauge_${iconValue}-min.png`
+        }
+      }
+    }
+
     // Populate the local stocks
     for (const api of apiListWStocks) {
       if (api.name === 'perf1M') {
