@@ -1,15 +1,37 @@
 #main-logo {
   font-size: var(--font-size-huge);
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
   padding: var(--small-space) 0;
 }
 
-#main-logo img {
-  height: var(--large-space);
-  margin-right: var(--xx-small-space);
+#main-logo span {
+  margin-left: var(--x-small-space);
 }
 
 #main-logo a {
+  position: relative;
   display: flex;
   align-items: center;
+}
+
+#main-logo a::after {
+  content: "API";
+  color: var(--red);
+  position: absolute;
+  font-size: 1rem;
+  font-family: 'Gloria Hallelujah', cursive;
+  bottom: 3px;
+  right: -21px;
+  opacity: .8;
+}
+
+#main-logo a::before {
+  content: ' ';
+  background-image: url('/assets/images/logo.png');
+  width: var(--xx-large-space);
+  height: var(--xx-large-space);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

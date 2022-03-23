@@ -3,7 +3,7 @@ header section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--light-gray);
+  border-bottom: 1px solid var(--blue);
 }
 
 header section:nth-child(1) {

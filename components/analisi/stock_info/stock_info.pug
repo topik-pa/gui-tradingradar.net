@@ -1,11 +1,11 @@
 
 section(id="stock_info")
-  h2 Informazioni, analisi tecnica e rassegna stampa #{stock.name}
+  h1 Informazioni, analisi tecnica e rassegna stampa #{stock.name}
   div 
     span Nome: #{stock.name}
     span ISIN: #{stock.isin}
   div(class="info")
-    h3 Informazioni #{stock.name}
+    h2 Informazioni #{stock.name}
     div 
       div(class="last-price") Ultimo prezzo rilevato: 
         span
@@ -13,16 +13,16 @@ section(id="stock_info")
         span
       div(class="first")
         div(class="profile")
-          h4 Profilo 
+          h3 Profilo 
           div 
             a(href="#", target="_blank", rel="noopener noreferrer") [Continua sull'originale]
         div(class="comment")
-          h4 Commento
+          h3 Commento
           div 
             a(href="#", target="_blank", rel="noopener noreferrer") [Continua sull'originale]
       div(class="second")
         div(class="dividends")
-          h4 Dividendi 
+          h3 Dividendi 
             a(href="#", target="_blank", rel="noopener noreferrer") [Vedi sull'originale]
           div 
             div(class="divYield") Div. Yield (%): 
@@ -32,7 +32,7 @@ section(id="stock_info")
             div(class="lastDiv") Data ultimo dividendo: 
               span
         div(class="average")
-          h4 Medie mobili 
+          h3 Medie mobili 
             a(href="#", target="_blank", rel="noopener noreferrer") [Vedi sull'originale]
           div 
             div(class="mm20") Media mobile 20 gg: 
@@ -42,7 +42,7 @@ section(id="stock_info")
             div(class="mm100") Media mobile 100 gg: 
               span
         div(class="minmax")
-          h4 Minimi e massimi
+          h3 Minimi e massimi
             a(href="#", target="_blank", rel="noopener noreferrer") [Vedi sull'originale]
           div 
             div(class="absMax") Massimo assoluto: 
@@ -54,7 +54,7 @@ section(id="stock_info")
             div(class="min") Minimo anno corrente: 
               span              
         div(class="performance")
-          h4 Performance
+          h3 Performance
             a(href="#", target="_blank", rel="noopener noreferrer") [Vedi sull'originale]
           div 
             div(class="perf1M") Performance (1 mese): 
@@ -64,10 +64,10 @@ section(id="stock_info")
             div(class="perf1Y") Performance (1 anno): 
               span
   div(class="analysis")
-    h3 Analisi tecnica #{stock.name}
+    h2 Analisi tecnica #{stock.name}
     div 
       div(class="borsa-italiana")
-        h4 Borsa Italiana
+        h3 Borsa Italiana
         div(class="resistance") Resistenza: 
           span
         div(class="support") Supporto: 
@@ -79,13 +79,13 @@ section(id="stock_info")
         div(class="rating") Rating: 
           span
       div(class="il-sole-24-ore")
-        h4 Il Sole 24 Ore
+        h3 Il Sole 24 Ore
         div(class="short-tend") Tendenza breve periodo: 
           span
         div(class="med-tend") Tendenza medio periodo:
           span
       div(class="milano-finanza")
-        h4 Milano Finanza
+        h3 Milano Finanza
         div(class="rating") Rating [A-E]: 
           span
         div(class="risk") Risk [0-100]: 
@@ -93,13 +93,13 @@ section(id="stock_info")
         div(class="rsi") RSI: 
           span                
       div(class="soldi-on-line")
-        h4 SoldiOnLine
+        h3 SoldiOnLine
         div(class="target") Prezzo obiettivo: 
           span
         div(class="evaluation") Giudizio: 
           span      
       div(class="teleborsa")
-        h4 Teleborsa
+        h3 Teleborsa
         div(class="resistance") Resistenza: 
           span
         div(class="support") Supporto: 
@@ -108,5 +108,5 @@ section(id="stock_info")
           span        
 
   div(class="news")
-    h3 Rassegna stampa #{stock.name}
+    h2 Rassegna stampa #{stock.name}
     ul 

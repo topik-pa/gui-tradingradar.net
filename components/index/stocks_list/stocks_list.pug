@@ -33,25 +33,25 @@
   ]
   let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 section(id="stocks_list")
-  h2 Analisi tecniche, informazioni e rassegna stampa dei titoli del FTSE MIB 
+  h1 Analisi tecniche, informazioni e rassegna stampa dei titoli del FTSE MIB 
   p Ottieni l'analisi tecnica e le ultime notizie delle principali azioni italiane. 
-  p Tutte le informazioni sono raccolte in tempo reale dai principali media online e comprendono le seguenti fonti 
+  p Tutte le informazioni sono raccolte in tempo reale dai principali media online e comprendono le seguenti fonti.
   div 
-    h3 Le fonti principali
+    h2 Le fonti principali
     p Le sorgenti sono i principali media online del settore finanziario
     div(class="sources")
       each source in sources
         a(class="source img_icon " + source.id, href=source.href, title=source.name) #{source.name}
   div 
-    h3 tradingradar.net API 
+    h2 tradingradar.net API 
     p Le informazioni presenti in questo sito sono disponbili anche attraverso API (Application Program Interface). Gli sviluppatori interessati possono accedervi attraverso il servizio di #[a(href="https://rapidapi.com/marcopavanmp-R024fyPhqP6/api/tradingradar", title="Rapid API") Rapid API].
   div
-    h3 Seleziona il titolo azionario per ottenere l'analisi che stai cercando
+    h2 Seleziona il titolo azionario per ottenere l'analisi che stai cercando
     div(class="alphabet")
       each letter in alphabet
         span #{letter}
     div(class="stocks") 
       each stock in stocks
         a(class="stock hide", href=`/analisi/${encodeURI(stock.name.toLowerCase())}?isin=${stock.isin}`, title=stock.name, data-letter=stock.name[0])
-          img(src=`/assets/images/stocks/${stock.id}.png`, alt=stock.name)
+          img(src=`/assets/images/stocks/${stock.code}.png`, alt=stock.name)
           span #{stock.name}

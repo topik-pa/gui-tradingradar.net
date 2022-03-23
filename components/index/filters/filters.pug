@@ -3,6 +3,8 @@ section(id="filters")
   h2 I titoli di maggiore interesse in base alla loro situazione tecnica
   p Una proposta di titoli azionazi del FTSE Mib filtrati in base alla loro analisi tecnica e giudizio complessivo.
   h3 Rating e raccomandazione delle Banche di affari
+  div(class="desc") 
+      p I titoli con la valutazione maggiore secondo Milano Finanza e Borsa Italiana e i titoli con giudizio BUY e tendenza al rialzo.
   div(id="ranking")
     div(class="list")
       div(class="ranking")
@@ -19,8 +21,9 @@ section(id="filters")
             span Titolo
             span Giudizio
             span Tendenza medio periodo
-    div(class="desc") 
-      p I titoli con la valutazione maggiore secondo Milano Finanza e Borsa Italiana e i titoli con giudizio BUY e tendenza al rialzo
+  h3 Titoli in ipercomprato o ipervenduto
+  div(class="desc") 
+      p I titoli in situazione di ipercomprato e ipervenduto. I dati sono presi dai valori di RSI presi da Borsa Italiana e Milano Finanza.
   div(id="iper")
     div(class="list")
       div(class="overbought")
@@ -37,5 +40,3 @@ section(id="filters")
             span Titolo
             span RSI Borsa Italiana
             span RSI Milano Finanza
-    div(class="desc") 
-      p I titoli in situazione di ipercomprato e ipervenduto. I dati sono presi dai valori di RSI presi da Borsa Italiana e Milano Finanza.

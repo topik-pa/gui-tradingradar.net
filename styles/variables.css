@@ -14,8 +14,8 @@
   --green: #008c45;
 
   --primary: var(--darkest-gray);
-  --secondary: var(--lighter-gray);
-  --tertiary: var(--blue);
+  --secondary: var(--blue);
+  --tertiary: var(--white);
   --error: var(--red);
   --success: var(--green);
   --link: var(--blue);

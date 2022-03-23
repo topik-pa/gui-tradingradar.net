@@ -22,3 +22,7 @@
 #api_list .list ul li:nth-child(odd) {
   background-color: var(--light-gray);
 }
+
+#api_list div { 
+  margin-top: var(--normal-space)
+}

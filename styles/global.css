@@ -22,13 +22,20 @@ p {
   margin-bottom: var(--x-small-space);
 }
 
-/*main {
-  padding: 0 var(--view-padding);
-}*/
-
+main {
+  padding-top: var(--view-padding);
+}
 main section {
-  margin-top: var(--section-margin);
-  padding: var(--view-padding) var(--view-padding) 0;
+  margin-bottom: var(--section-margin);
+  padding: var(--view-padding);
+}
+
+ul {
+  list-style: auto;
+  margin-left: var(--x-large-space);
+}
+li {
+  margin: var(--x-small-space);
 }
 
 .hide {
