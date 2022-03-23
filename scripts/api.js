@@ -4,7 +4,7 @@ const api = {
     const params = {
       method: 'GET'
     }
-    await fetch(path, params)
+    await fetch(window.location.origin + '/' + path, params)
       .then(resp => {
         formattedResp.status = resp.status
         return resp.json()
@@ -19,7 +19,7 @@ const api = {
       method: 'POST',
       body: JSON.stringify(data)
     }
-    await fetch(path, params)
+    await fetch(window.location.origin + '/' + path, params)
       .then(resp => {
         formattedResp.status = resp.status
         return resp.json()

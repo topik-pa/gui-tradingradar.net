@@ -10,7 +10,7 @@ mainMenu.toggleMobileMenu()
 cookieLayer.init()
 gotoTop.init()
 
-if (document.querySelector('body#index')) {
+if (document.querySelector('body#home')) {
   index.init()
 }
 if (document.querySelector('body#analisi')) {
