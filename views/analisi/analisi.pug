@@ -1,7 +1,7 @@
 extends ../layout.pug
 
 block append meta
-  title #{title} | #{proj_name}
+  title #{stock.name} | #{proj_name}
   meta(name="description" content="")
   meta(name="keywords" content="")
   meta(name="robots" content="")
@@ -14,4 +14,5 @@ block append meta
   meta(name="og:image" content="")
 
 block main 
-  main #{isin}
+  main
+    include ../../components/analisi/stock_info/stock_info.pug

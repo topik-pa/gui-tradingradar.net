@@ -19,6 +19,8 @@
 @import "/components/shared/disclaimer/disclaimer.css";
 
 @import "/views/index.css";
+@import "/analisi/analisi.css";
+@import "/components/analisi/stock_info/stock_info.css";
 @import "/components/index/stocks_list/stocks_list.css";
 @import "/components/index/api_list/api_list.css";
 @import "/components/index/aggregator/aggregator.css";

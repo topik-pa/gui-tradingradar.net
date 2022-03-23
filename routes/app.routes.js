@@ -1,4 +1,3 @@
-const { query } = require('express')
 const https = require('https')
 let stocks = []
 
@@ -35,6 +34,14 @@ function getStocksList () {
 }
 getStocksList()
 
+function capitalize (text) {
+  const words = text.split(' ')
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].substr(1)
+  }
+  return words.join(' ')
+}
+
 module.exports = app => {
   app.get('/', (req, res) => {
     res.locals.stocks = stocks
@@ -47,6 +54,6 @@ module.exports = app => {
     res.render('contatti/contatti', { id: 'contacts', title: 'Contatti' })
   })
   app.get('/analisi/:stock', (req, res) => {
-    res.render('analisi/analisi', { id: 'analisi', title: 'Analisi', isin: req.query.isin })
+    res.render('analisi/analisi', { id: 'analisi', title: 'Analisi', stock: { isin: req.query.isin, name: capitalize(req.params.stock) } })
   })
 }
