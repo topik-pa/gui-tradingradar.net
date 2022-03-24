@@ -1,13 +1,13 @@
 
 section(id="stock_info")
-  h1 Informazioni, analisi tecnica e rassegna stampa #{stock.name}
-  div 
+  h1 #[span #{stock.name}] - Informazioni, analisi tecnica e rassegna stampa
+  div(class="intro")
     span Nome: #{stock.name}
     span ISIN: #{stock.isin}
   div(class="info")
     h2 Informazioni #{stock.name}
     div 
-      div(class="last-price") Ultimo prezzo rilevato: 
+      div(class="last-price") Ultimo prezzo rilevato (€): 
         span
       div(class="volatility") Volatilità: 
         span
@@ -15,15 +15,15 @@ section(id="stock_info")
         div(class="profile")
           h3 Profilo 
           div 
-            a(href="#", target="_blank", rel="noopener noreferrer") [Continua sull'originale]
+            a(href="#", target="_blank", rel="noopener noreferrer") [continua sul sito originale]
         div(class="comment")
           h3 Commento
           div 
-            a(href="#", target="_blank", rel="noopener noreferrer") [Continua sull'originale]
+            a(href="#", target="_blank", rel="noopener noreferrer") [continua sul sito originale]
       div(class="second")
         div(class="dividends")
           h3 Dividendi 
-            a(href="#", target="_blank", rel="noopener noreferrer") [Vedi sull'originale]
+            a(href="#", target="_blank", rel="noopener noreferrer") [Fonte]
           div 
             div(class="divYield") Div. Yield (%): 
               span
@@ -33,17 +33,17 @@ section(id="stock_info")
               span
         div(class="average")
           h3 Medie mobili 
-            a(href="#", target="_blank", rel="noopener noreferrer") [Vedi sull'originale]
+            a(href="#", target="_blank", rel="noopener noreferrer") [Fonte]
           div 
-            div(class="mm20") Media mobile 20 gg: 
+            div(class="mm20") Media mobile 20 gg (€): 
               span
-            div(class="mm40") Media mobile 40 gg: 
+            div(class="mm40") Media mobile 40 gg (€): 
               span
-            div(class="mm100") Media mobile 100 gg: 
+            div(class="mm100") Media mobile 100 gg (€): 
               span
         div(class="minmax")
           h3 Minimi e massimi
-            a(href="#", target="_blank", rel="noopener noreferrer") [Vedi sull'originale]
+            a(href="#", target="_blank", rel="noopener noreferrer") [Fonte]
           div 
             div(class="absMax") Massimo assoluto: 
               span
@@ -55,7 +55,7 @@ section(id="stock_info")
               span              
         div(class="performance")
           h3 Performance
-            a(href="#", target="_blank", rel="noopener noreferrer") [Vedi sull'originale]
+            a(href="#", target="_blank", rel="noopener noreferrer") [Fonte]
           div 
             div(class="perf1M") Performance (1 mese): 
               span
@@ -66,43 +66,48 @@ section(id="stock_info")
   div(class="analysis")
     h2 Analisi tecnica #{stock.name}
     div 
-      div(class="borsa-italiana")
-        h3 Borsa Italiana
-        div(class="resistance") Resistenza: 
+      div(class="borsa-italiana-logo img_icon")
+        h3 
+          a(href="#", target="_blank", rel="noopener noreferrer") Borsa Italiana
+        div(class="resistance") Resistenza (€): 
           span
-        div(class="support") Supporto: 
+        div(class="support") Supporto (€): 
           span
         div(class="rsi") RSI: 
           span
         div(class="evaluation") Valutazione: 
           span
-        div(class="rating") Rating: 
+        div(class="rating") Rating [0-4]: 
           span
-      div(class="il-sole-24-ore")
-        h3 Il Sole 24 Ore
+      div(class="il-sole-24-ore-logo img_icon")
+        h3 
+          a(href="#", target="_blank", rel="noopener noreferrer") Il Sole 24 Ore
         div(class="short-tend") Tendenza breve periodo: 
           span
-        div(class="med-tend") Tendenza medio periodo:
+        div(class="med-tend") Tendenza medio periodo: 
           span
-      div(class="milano-finanza")
-        h3 Milano Finanza
+      div(class="milano-finanza-logo img_icon")
+        h3 
+          a(href="#", target="_blank", rel="noopener noreferrer") Milano Finanza
         div(class="rating") Rating [A-E]: 
           span
         div(class="risk") Risk [0-100]: 
           span
         div(class="rsi") RSI: 
           span                
-      div(class="soldi-on-line")
-        h3 SoldiOnLine
-        div(class="target") Prezzo obiettivo: 
+      div(class="soldi-on-line-logo img_icon")
+        h3 
+          a(href="#", target="_blank", rel="noopener noreferrer") SoldiOnLine
+        div(class="target") Prezzo obiettivo (€): 
           span
         div(class="evaluation") Giudizio: 
           span      
-      div(class="teleborsa")
-        h3 Teleborsa
-        div(class="resistance") Resistenza: 
+      div(class="teleborsa-logo img_icon")
+        h3 
+          a(href="#", target="_blank", rel="noopener noreferrer") Teleborsa
+        div(class="resistance") Resistenza (€): 
           span
-        div(class="support") Supporto: 
+        div(class="support") Supporto (€): 
           span
         div(class="trend") Trend: 
           span        

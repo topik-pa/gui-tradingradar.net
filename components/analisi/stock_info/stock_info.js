@@ -39,8 +39,8 @@ function printInfoData () {
   const $divValue = $dividends.querySelector('.divValue span')
   $divValue.prepend(data.info.body.lastDiv.value)
   const $lastDiv = $dividends.querySelector('.lastDiv span')
-  $lastDiv.prepend(data.info.body.lastDiv.value)
-  $dividends.querySelector('a').href = data.info.body.divYield.source
+  $lastDiv.prepend(data.info.body.lastDivDate.value)
+  $dividends.querySelector('a').href = data.info.body.lastDivDate.source
 
   const $average = $root.querySelector('.average')
   const $mm20days = $average.querySelector('.mm20 span')
@@ -74,27 +74,32 @@ function printInfoData () {
 
 function printAnalysisData () {
   const $analysis = $root.querySelector('.analysis')
-  const $borsaItaliana = $analysis.querySelector('.borsa-italiana')
+  const $borsaItaliana = $analysis.querySelector('.borsa-italiana-logo')
+  $borsaItaliana.querySelector('a').href = data.analysis.body.borsaIt_resistance.source
   $borsaItaliana.querySelector('.resistance span').innerText = data.analysis.body.borsaIt_resistance.value
   $borsaItaliana.querySelector('.support span').innerText = data.analysis.body.borsaIt_support.value
   $borsaItaliana.querySelector('.rsi span').innerText = data.analysis.body.borsaIt_rsi.value
   $borsaItaliana.querySelector('.evaluation span').innerText = data.analysis.body.borsaIt_evaluation.value
   $borsaItaliana.querySelector('.rating span').innerText = data.analysis.body.borsaIt_rating.value
 
-  const $ilSole24Ore = $analysis.querySelector('.il-sole-24-ore')
+  const $ilSole24Ore = $analysis.querySelector('.il-sole-24-ore-logo')
+  $ilSole24Ore.querySelector('a').href = data.analysis.body.sol24_shortTendency.source
   $ilSole24Ore.querySelector('.short-tend span').innerText = data.analysis.body.sol24_shortTendency.value
   $ilSole24Ore.querySelector('.med-tend span').innerText = data.analysis.body.sol24_mediumTendency.value
 
-  const $mf = $analysis.querySelector('.milano-finanza')
+  const $mf = $analysis.querySelector('.milano-finanza-logo')
+  $mf.querySelector('a').href = data.analysis.body.milFin_mfRanking.source
   $mf.querySelector('.rating span').innerText = data.analysis.body.milFin_mfRanking.value
   $mf.querySelector('.risk span').innerText = data.analysis.body.milFin_mfRisk.value
   $mf.querySelector('.rsi span').innerText = data.analysis.body.milFin_mfRsi.value
 
-  const $sol = $analysis.querySelector('.soldi-on-line')
+  const $sol = $analysis.querySelector('.soldi-on-line-logo')
+  $sol.querySelector('a').href = data.analysis.body.sol_lastTargetPrice.source
   $sol.querySelector('.target span').innerText = data.analysis.body.sol_lastTargetPrice.value
   $sol.querySelector('.evaluation span').innerText = data.analysis.body.sol_lastJudgment.value
 
-  const $teleborsa = $analysis.querySelector('.teleborsa')
+  const $teleborsa = $analysis.querySelector('.teleborsa-logo')
+  $teleborsa.querySelector('a').href = data.analysis.body.teleb_tbResistance.source
   $teleborsa.querySelector('.resistance span').innerText = data.analysis.body.teleb_tbResistance.value
   $teleborsa.querySelector('.support span').innerText = data.analysis.body.teleb_tbSupport.value
   $teleborsa.querySelector('.trend span').innerText = data.analysis.body.teleb_trend.value
@@ -109,6 +114,8 @@ function printNewsData () {
     $a.innerText = item.title
     $a.title = item.title
     $a.href = item.url
+    $a.target = '_blank'
+    $a.rel = 'noopener noreferrer'
     $li.appendChild($a)
     $ul.appendChild($li)
   }
