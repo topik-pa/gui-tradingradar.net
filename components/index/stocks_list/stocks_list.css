@@ -42,12 +42,13 @@
   margin: var(--normal-space);
   font-weight: 500;
 }
-#stocks_list .stocks .stock:hover span {
+#stocks_list .stocks .stock:hover {
   filter: brightness(90%);
 }
 
 #stocks_list .stocks .stock img {
   margin: var(--x-small-space) 25%;
   width: 50%;
-  border: 1px solid var(--darker-gray);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius-round);
 }

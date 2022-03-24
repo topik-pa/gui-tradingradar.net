@@ -18,6 +18,10 @@ function alphabetShowHideStocks (letter = 'A') {
   Array.from(stockList).forEach(($stock) => {
     activeLetters.add($stock.dataset.letter)
     if ($stock.dataset.letter.toUpperCase() === letter) {
+      const $logo = $stock.querySelector('img')
+      if (!$logo.src) {
+        $logo.src = `/assets/images/stocks/${$stock.dataset.code}-min.png`
+      }
       $stock.classList.remove('hide')
     } else {
       $stock.classList.add('hide')
