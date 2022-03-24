@@ -26,3 +26,7 @@
 #api_list div { 
   margin-top: var(--normal-space)
 }
+
+#api_list .source {
+  font-style: italic;
+}
