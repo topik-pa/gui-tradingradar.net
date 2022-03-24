@@ -72,11 +72,11 @@ module.exports = app => {
     }
     const breadcrumbs = [
       {
-        name: 'analysis'
+        name: 'analysis',
+        url: '/#select_stock'
       },
       {
-        name: req.params.stock,
-        url: `/analisi/${encodeURI(req.params.stock.toLowerCase())}?isin=${stock.isin}`
+        name: req.params.stock
       }
     ]
     res.render('analisi/analisi', { id: 'analysis', title: 'Analysis', stock, breadcrumbs })

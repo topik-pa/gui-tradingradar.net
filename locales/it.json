@@ -3,7 +3,6 @@
 	"disclaimer": "{{{attention}}}: operare in Borsa e fare trading costituiscono {{{risk}}}. Le informazioni qui presentate non costituiscono una sollecitazione di acquisto o vendita di titoli azionari e si intendono per puro uso informativo. Il proprietario del presente sito non si dichiara responsabile di un utilizzo improprio delle informazioni qui ottenute.",
 	"contacts": "contatti",
 	"analysis": "analisi",
-	"analisi.css": "analisi.css",
 	"privacy": "privacy",
 	"amplifon": "amplifon",
 	"poste italiane": "poste italiane",
@@ -14,5 +13,9 @@
 	"recordati": "recordati",
 	"unipol": "unipol",
 	"saipem": "saipem",
-	"terna - rete elettrica nazionale": "terna - rete elettrica nazionale"
+	"terna - rete elettrica nazionale": "terna - rete elettrica nazionale",
+	"stellantis": "stellantis",
+	"analisi.css": "analisi.css",
+	"banca generali": "banca generali",
+	"leonardo": "leonardo"
 }

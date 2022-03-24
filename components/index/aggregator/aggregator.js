@@ -1,5 +1,4 @@
-// import api from '../../../scripts/api.js'
-let $root, aggregators
+let $root, cls, aggregators
 
 function setAggregatorValue (aggregator) {
   let value = 0
@@ -29,11 +28,14 @@ function printAggregatorValue (aggregator) {
   const $value = $aggregator.querySelector('span')
   $gauge.src = aggregator.iconValue
   $value.innerText = aggregator.value
+  $aggregator.classList.remove(...cls)
+  $aggregator.classList.add('success')
 }
 
 const aggregator = {
   init: (apiListWStocks) => {
     $root = document.getElementById('aggregator')
+    cls = ['idle', 'loading', 'success', 'error']
     aggregators = {
       performance: {
         id: 0,

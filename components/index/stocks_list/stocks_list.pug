@@ -45,13 +45,13 @@ section(id="stocks_list")
   div 
     h2 tradingradar.net API 
     p Le informazioni presenti in questo sito sono disponbili anche attraverso API (Application Program Interface). Gli sviluppatori interessati possono accedervi attraverso il servizio di #[a(href="https://rapidapi.com/marcopavanmp-R024fyPhqP6/api/tradingradar", title="Rapid API") Rapid API].
-  div
+  div(id="select_stock")
     h2 Seleziona il titolo azionario per ottenere l'analisi che stai cercando
     div(class="alphabet")
       each letter in alphabet
         span #{letter}
     div(class="stocks") 
       each stock in stocks
-        a(class="stock hide", href=`/analisi/${encodeURI(stock.name.toLowerCase())}?isin=${stock.isin}`, title=stock.name, data-letter=stock.name[0], data-code=stock.code)
-          img(alt=stock.name)
+        a(class="stock hide", href=`/analisi/${encodeURI(stock.name.toLowerCase())}?isin=${stock.isin}`, title=stock.name, data-code=stock.code, data-letter=stock.name[0])
+          img(src=`/assets/images/stocks/undefined.png`, alt=stock.name, data-status)
           span #{stock.name}

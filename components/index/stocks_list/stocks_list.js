@@ -19,7 +19,8 @@ function alphabetShowHideStocks (letter = 'A') {
     activeLetters.add($stock.dataset.letter)
     if ($stock.dataset.letter.toUpperCase() === letter) {
       const $logo = $stock.querySelector('img')
-      if (!$logo.src) {
+      if (!$logo.dataset.status) {
+        $logo.dataset.status = 'loaded'
         $logo.src = `/assets/images/stocks/${$stock.dataset.code}-min.png`
       }
       $stock.classList.remove('hide')

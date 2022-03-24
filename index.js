@@ -28,8 +28,6 @@ app.use((req, res, next) => {
   next()
 })
 
-// app.locals.X_RAPIDAPI_KEY = process.env.X_RAPIDAPI_KEY
-
 // ROUTES
 require('./routes/stocks.routes')(app)
 require('./routes/app.routes')(app)

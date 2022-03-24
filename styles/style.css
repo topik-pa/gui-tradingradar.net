@@ -22,7 +22,7 @@
 @import "/components/shared/header/breadcrumbs/breadcrumbs.css";
 
 @import "/views/index.css";
-@import "/analisi/analisi.css";
+@import "/views/analisi/analisi.css";
 @import "/components/analisi/stock_info/stock_info.css";
 @import "/components/index/stocks_list/stocks_list.css";
 @import "/components/index/api_list/api_list.css";

@@ -1,7 +1,6 @@
 #breadcrumbs {
   display: block;
   border-bottom: 1px solid rgba(62, 120, 232, 0.2);
-  font-style: italic;
   text-align: center;
 }
 
@@ -10,7 +9,6 @@
 }
 
 #breadcrumbs span, #breadcrumbs a {
-  font-style: normal;
   font-weight: 500;
 }
 
