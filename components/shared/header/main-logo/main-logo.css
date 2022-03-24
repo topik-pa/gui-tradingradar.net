@@ -19,11 +19,12 @@
   content: "API";
   color: var(--red);
   position: absolute;
-  font-size: 1rem;
+  font-size: var(--font-size-very-small);
   font-family: 'Gloria Hallelujah', cursive;
-  bottom: 3px;
-  right: -21px;
+  bottom: 6px;
+  right: -20px;
   opacity: .8;
+  font-weight: bold;
 }
 
 #main-logo a::before {

@@ -29,13 +29,13 @@
 }
 
 #filters .list ul li *:nth-child(1) {
-  width: 70%;
+  width: 60%;
 }
 #filters .list ul li *:nth-child(2) {
-  width: 15%;
+  width: 20%;
 }
 #filters .list ul li *:nth-child(3) {
-  width: 15%;
+  width: 20%;
 }
 
 #filters .list ul li:nth-child(odd) {

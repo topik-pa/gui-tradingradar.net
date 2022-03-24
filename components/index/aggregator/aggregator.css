@@ -24,3 +24,7 @@
   font-weight: 500;
   margin-left: 0.5rem;
 }
+
+#aggregator .volatility img {
+  transform: scaleX(-1);
+}

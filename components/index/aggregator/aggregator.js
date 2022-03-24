@@ -79,22 +79,22 @@ const aggregator = {
           let iconValue
           switch (true) {
           case (this.value > 70):
-            iconValue = 5
+            iconValue = 0
             break
           case (this.value > 56):
-            iconValue = 4
-            break
-          case (this.value > 44):
-            iconValue = 3
-            break
-          case (this.value > 32):
-            iconValue = 2
-            break
-          case (this.value > 20):
             iconValue = 1
             break
+          case (this.value > 44):
+            iconValue = 2
+            break
+          case (this.value > 32):
+            iconValue = 3
+            break
+          case (this.value > 20):
+            iconValue = 4
+            break
           default:
-            iconValue = 0
+            iconValue = 5
             break
           }
           return `/assets/images/gauge/gauge_${iconValue}-min.png`
