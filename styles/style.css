@@ -19,6 +19,7 @@
 @import "/components/shared/cookie_layer/cookie_layer.css";
 @import "/components/shared/goto_top/goto_top.css";
 @import "/components/shared/disclaimer/disclaimer.css";
+@import "/components/shared/header/breadcrumbs/breadcrumbs.css";
 
 @import "/views/index.css";
 @import "/analisi/analisi.css";

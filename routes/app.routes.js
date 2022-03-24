@@ -48,12 +48,37 @@ module.exports = app => {
     res.render('index', { id: 'home', title: 'Home' })
   })
   app.get('/privacy', (req, res) => {
-    res.render('privacy/privacy', { id: 'privacy', title: 'Privacy' })
+    const breadcrumbs = [
+      {
+        name: 'privacy',
+        url: '/privacy'
+      }
+    ]
+    res.render('privacy/privacy', { id: 'privacy', title: 'Privacy', breadcrumbs })
   })
   app.get('/contatti', (req, res) => {
-    res.render('contatti/contatti', { id: 'contacts', title: 'Contatti' })
+    const breadcrumbs = [
+      {
+        name: 'contacts',
+        url: '/contatti'
+      }
+    ]
+    res.render('contatti/contatti', { id: 'contacts', title: 'Contacts', breadcrumbs })
   })
   app.get('/analisi/:stock', (req, res) => {
-    res.render('analisi/analisi', { id: 'analisi', title: 'Analisi', stock: { isin: req.query.isin, name: capitalize(req.params.stock) } })
+    const stock = {
+      isin: req.query.isin,
+      name: capitalize(req.params.stock)
+    }
+    const breadcrumbs = [
+      {
+        name: 'analysis'
+      },
+      {
+        name: req.params.stock,
+        url: `/analisi/${encodeURI(req.params.stock.toLowerCase())}?isin=${stock.isin}`
+      }
+    ]
+    res.render('analisi/analisi', { id: 'analysis', title: 'Analysis', stock, breadcrumbs })
   })
 }
