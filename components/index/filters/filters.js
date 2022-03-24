@@ -103,8 +103,6 @@ const filters = {
     addedFilters.overbought.status = 'success'
     addedFilters.oversold.status = 'success'
 
-    // apiListWStocks = apiListWStocks.concat(apiCallList)
-
     const BIRatings = apis.filter((api) => {
       return api.name === 'rating'
     })

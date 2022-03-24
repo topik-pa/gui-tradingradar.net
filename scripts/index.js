@@ -12,14 +12,16 @@ gotoTop.init()
 
 if (location.hash) {
   const $target = document.getElementById(location.hash.replace('#', ''))
-  setTimeout(() => {
-    $target.scrollIntoView({ behavior: 'smooth' })
-  }, 500)
+  if ($target) {
+    setTimeout(() => {
+      $target.scrollIntoView({ behavior: 'smooth' })
+    }, 500)
+  }
 }
 
 if (document.querySelector('body#home')) {
   index.init()
 }
-if (document.querySelector('body#analisi')) {
+if (document.querySelector('body#analysis')) {
   analisi.init()
 }

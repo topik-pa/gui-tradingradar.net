@@ -50,8 +50,7 @@ module.exports = app => {
   app.get('/privacy', (req, res) => {
     const breadcrumbs = [
       {
-        name: 'privacy',
-        url: '/privacy'
+        name: 'privacy'
       }
     ]
     res.render('privacy/privacy', { id: 'privacy', title: 'Privacy', breadcrumbs })
@@ -59,8 +58,7 @@ module.exports = app => {
   app.get('/contatti', (req, res) => {
     const breadcrumbs = [
       {
-        name: 'contacts',
-        url: '/contatti'
+        name: 'contacts'
       }
     ]
     res.render('contatti/contatti', { id: 'contacts', title: 'Contacts', breadcrumbs })
