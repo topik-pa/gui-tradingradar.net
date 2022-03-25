@@ -45,7 +45,7 @@ function capitalize (text) {
 module.exports = app => {
   app.get('/', (req, res) => {
     res.locals.stocks = stocks
-    res.render('index', { id: 'home', title: 'Home' })
+    res.render('index', { id: 'home', title: 'Home', url: req.url })
   })
   app.get('/privacy', (req, res) => {
     const breadcrumbs = [
@@ -53,7 +53,7 @@ module.exports = app => {
         name: 'privacy'
       }
     ]
-    res.render('privacy/privacy', { id: 'privacy', title: 'Privacy', breadcrumbs })
+    res.render('privacy/privacy', { id: 'privacy', title: 'Privacy', url: req.url, breadcrumbs })
   })
   app.get('/contatti', (req, res) => {
     const breadcrumbs = [
@@ -61,7 +61,7 @@ module.exports = app => {
         name: 'contacts'
       }
     ]
-    res.render('contatti/contatti', { id: 'contacts', title: 'Contacts', breadcrumbs })
+    res.render('contatti/contatti', { id: 'contacts', title: 'Contacts', url: req.url, breadcrumbs })
   })
   app.get('/analisi/:stock', (req, res) => {
     const stock = {
@@ -77,6 +77,6 @@ module.exports = app => {
         name: req.params.stock
       }
     ]
-    res.render('analisi/analisi', { id: 'analysis', title: 'Analysis', stock, breadcrumbs })
+    res.render('analisi/analisi', { id: 'analysis', title: 'Analysis', url: req.url, stock, breadcrumbs })
   })
 }
