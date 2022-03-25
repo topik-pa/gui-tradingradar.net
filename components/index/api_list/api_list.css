@@ -30,3 +30,13 @@
 #api_list .source {
   font-style: italic;
 }
+
+
+@media screen and (max-width: 768px) {
+  #api_list .list {
+    flex-direction: column;
+  }
+  #api_list .list div {
+    margin-top: var(--x-large-space);
+  }
+}

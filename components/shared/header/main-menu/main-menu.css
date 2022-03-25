@@ -30,14 +30,16 @@
     display: block;
   }
   #main-menu ul {
-    background-color: var(--darker-gray);
-    padding: var(--normal-space) var(--normal-space);
+    font-size: var(--font-size-bigger);
+    background-color: var(--dark-gray);
+    padding: var(--large-space) var(--large-space);
   }
   #main-menu li:not(:last-child) {
     display: block;
     padding-bottom: var(--large-space);
   }
   #main-menu a {
+    color: var(--white);
     padding-left: 0;
   }
 }

@@ -3,10 +3,6 @@
   justify-content: space-around;
 }
 
-#filters .list > div {
-  width: 30%;
-}
-
 #filters .list h4 {
   text-align: center;
 }
@@ -40,4 +36,26 @@
 
 #filters .list ul li:nth-child(odd) {
   background-color: var(--light-gray);
+}
+
+
+@media screen and (max-width: 1024px) {
+  #filters .list ul li *:nth-child(1) {
+    width: 50%;
+  }
+  #filters .list ul li *:nth-child(2) {
+    width: 25%;
+  }
+  #filters .list ul li *:nth-child(3) {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #filters .list {
+    flex-direction: column;
+  }
+  #filters .list div {
+    margin-top: var(--x-large-space);
+  }
 }

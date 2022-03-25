@@ -64,3 +64,25 @@
   height: 2rem;
   overflow: visible;
 }
+
+
+@media screen and (max-width: 1024px) {
+  #stocks_list .sources .source {
+    margin-right: var(--x-large-space);
+  }
+  #stocks_list .stocks .stock { 
+    width: 12%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #stocks_list .sources .source {
+    margin-right: var(--xx-large-space);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #stocks_list .stocks .stock { 
+    width: 14%;
+  }
+}
