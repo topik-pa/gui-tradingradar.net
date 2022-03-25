@@ -1,5 +1,20 @@
 import api from '../../../scripts/api.js'
-let $root, cls, data, isin
+const data = {
+  info: {
+    status: 'idle',
+    body: undefined
+  },
+  analysis: {
+    status: 'idle',
+    body: undefined
+  },
+  news: {
+    status: 'idle',
+    body: undefined
+  }
+}
+const cls = ['idle', 'loading', 'success', 'error']
+let $root, isin
 
 async function callTheApi (type) {
   data[type].status = 'loading'
@@ -22,7 +37,7 @@ function updateUIStatus (type) {
 }
 
 function printInfoData () {
-  $root.querySelector('.last-price span').innerText = data.info.body.lastPrice.value
+  $root.querySelector('.last-price span').innerText = data.info.body.lastPrice.value || 'nd'
   $root.querySelector('.volatility span').innerText = data.info.body.volatility.value
 
   const $profile = $root.querySelector('.profile div')
@@ -123,30 +138,24 @@ function printNewsData () {
 
 const stockInfo = {
   init: async () => {
-    $root = document.getElementById('stock_info')
-    cls = ['idle', 'loading', 'success', 'error']
     isin = new URLSearchParams(window.location.search).get('isin')
-    data = {
-      info: {
-        status: 'idle',
-        body: undefined
-      },
-      analysis: {
-        status: 'idle',
-        body: undefined
-      },
-      news: {
-        status: 'idle',
-        body: undefined
-      }
-    }
+    $root = document.getElementById('stock_info')
     if (isin) {
       await callTheApi('info')
-      printInfoData()
+      if (data.info.status === 'success') {
+        printInfoData()
+      }
       await callTheApi('analysis')
-      printAnalysisData()
+      if (data.analysis.status === 'success') {
+        printAnalysisData()
+      }
       await callTheApi('news')
-      printNewsData()
+      if (data.news.status === 'success') {
+        printNewsData()
+      }
+      if (data.info.status === 'success' && data.analysis.status === 'success') {
+        return data
+      }
     }
   }
 }
