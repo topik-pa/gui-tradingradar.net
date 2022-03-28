@@ -97,3 +97,12 @@
   left: 0;
   top: 1.6rem;
 }
+
+@media screen and (max-width: 768px) {
+  #stock_info .second {
+    flex-direction: column;
+  }
+  #stock_info .analysis > div {
+    flex-direction: column;
+  }
+}

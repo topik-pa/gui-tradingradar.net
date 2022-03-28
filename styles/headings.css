@@ -2,6 +2,7 @@ h1 {
   font-size: var(--font-size-biggest);
   letter-spacing: .1rem;
   margin: 0 0 var(--normal-space);
+  line-height: 100%;
 }
 h2 {
   font-size: var(--font-size-huge);

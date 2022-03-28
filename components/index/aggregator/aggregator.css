@@ -13,7 +13,7 @@
 
 #aggregator .aggregator {
   text-align: center;
-  width: 33.3%;
+  margin: 0 var(--normal-space);
 }
 
 #aggregator p {
@@ -27,4 +27,11 @@
 
 #aggregator .volatility img {
   transform: scaleX(-1);
+}
+
+
+@media screen and (max-width: 768px) {
+  #aggregator > div {
+    flex-direction: column;
+  }
 }

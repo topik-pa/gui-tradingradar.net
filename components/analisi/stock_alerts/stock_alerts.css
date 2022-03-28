@@ -27,4 +27,5 @@
 #stock_alerts.show {
   height: 11rem;
   overflow-y: auto;
+  border-bottom: 1px solid var(--light-gray);
 }
