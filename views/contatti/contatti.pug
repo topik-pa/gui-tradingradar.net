@@ -1,14 +1,13 @@
 extends ../layout.pug
 
 block append meta
-  title #{title} | #{proj_name}
-  meta(name="description" content="")
-  meta(name="keywords" content="")
-  meta(name="robots" content="")
+  title #{__(title)} | #{proj_name}
+  meta(name="description" content="Pagina contatti")
+  meta(name="keywords" content="contatti, mail, tradingradar.net")
 
-  meta(name="og:url" content="")
-  meta(name="og:type" content="")
-  meta(name="og:title" content="")
-  meta(name="og:site_name" content="")
-  meta(name="og:description" content="")
-  meta(name="og:image" content="")
+block main
+  main 
+    section
+      h1 Contatti
+      p Per ogni domanda o questione relativa al sito ed ai suoi contenuti:
+      a(href="mailto:mailto:info@tradingradar.net") info@tradingradar.net

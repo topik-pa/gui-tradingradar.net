@@ -29,6 +29,7 @@
 }
 #stock_info .second > div {
   margin: 0 .7rem;
+  width: 100%;
 }
 #stock_info .second > div > div > div {
   padding: var(--xx-small-space) .2rem;

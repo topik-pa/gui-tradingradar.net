@@ -20,6 +20,7 @@ em {
 
 p {
   margin-bottom: var(--x-small-space);
+  line-height: 110%;
 }
 
 main {

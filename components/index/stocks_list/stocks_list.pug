@@ -33,18 +33,18 @@
   ]
   let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 section(id="stocks_list")
-  h1 Analisi tecniche, informazioni e rassegna stampa dei titoli del FTSE MIB 
-  p Ottieni l'analisi tecnica e le ultime notizie delle principali azioni italiane. 
-  p Tutte le informazioni sono raccolte in tempo reale dai principali media online e comprendono le seguenti fonti.
+  h1 Analisi tecniche, Informazioni e Rassegna Stampa dei titoli del FTSE Mib 
+  p Ottieni l'#[em analisi tecnica] e le #[em ultime notizie] delle principali azioni italiane. Confronta #[em i giudizi dei principali media] finanziari disponibili online e scopri quali sono #[em i titoli azionari di maggior interesse] tecnico in questo momento.
+  p Tutte le informazioni sono raccolte in tempo reale dai principali Media online e comprendono le seguenti fonti.
   div 
     h2 Le fonti principali
-    p Le sorgenti sono i principali media online del settore finanziario
+    p Le sorgenti sono i principali media online del settore finanziario.
     div(class="sources")
       each source in sources
         a(class="source img_icon " + source.id, href=source.href, title=source.name) #{source.name}
   div 
     h2 tradingradar.net API 
-    p Le informazioni presenti in questo sito sono disponbili anche attraverso API (Application Program Interface). Gli sviluppatori interessati possono accedervi attraverso il servizio di #[a(href="https://rapidapi.com/marcopavanmp-R024fyPhqP6/api/tradingradar", title="Rapid API") Rapid API].
+    p Le informazioni presenti in questo sito sono disponbili anche attraverso #[em API (Application Program Interface)]. #[br]Gli sviluppatori interessati possono accedervi attraverso il servizio di #[a(href="https://rapidapi.com/marcopavanmp-R024fyPhqP6/api/tradingradar", title="Rapid API", target="_blank", rel="noopener noreferrer") Rapid API].
   div(id="select_stock")
     h2 Seleziona il titolo azionario per ottenere l'analisi che stai cercando
     div(class="alphabet")
@@ -52,6 +52,6 @@ section(id="stocks_list")
         span #{letter}
     div(class="stocks") 
       each stock in stocks
-        a(class="stock hide", href=`/analisi/${encodeURI(stock.name.toLowerCase())}?isin=${stock.isin}`, title=stock.name, data-code=stock.code, data-letter=stock.name[0])
-          img(src=`/assets/images/stocks/undefined.png`, alt=stock.name, data-status)
+        a(class="stock hide", href=`/analisi/${encodeURI(stock.name.toLowerCase())}?isin=${stock.isin}`, title=__('tech_analysis') + ' ' + stock.name, data-code=stock.code, data-letter=stock.name[0])
+          img(src=`/assets/images/stocks/undefined.png`, alt=__('tech_analysis') + ' ' + stock.name, data-status)
           span #{stock.name}

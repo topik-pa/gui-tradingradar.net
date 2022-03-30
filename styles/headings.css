@@ -8,6 +8,7 @@ h2 {
   font-size: var(--font-size-huge);
   letter-spacing: .1rem;
   margin: var(--x-large-space) 0 var(--normal-space);
+  line-height: 100%;
 }
 h3 {
   font-size: var(--font-size-bigger);
