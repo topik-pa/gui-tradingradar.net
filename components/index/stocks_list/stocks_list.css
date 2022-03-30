@@ -38,6 +38,7 @@
 #stocks_list .stocks {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 #stocks_list .stocks .stock {
@@ -76,12 +77,18 @@
 }
 
 @media screen and (max-width: 768px) {
+  #select_stock h2 {
+    text-align: center;
+  }
   #stocks_list .sources .source {
-    margin-right: var(--xx-large-space);
+    width: 15%;
   }
 }
 
 @media screen and (max-width: 414px) {
+  /*#stocks_list .alphabet span {
+    margin: var(--large-space);
+  }*/
   #stocks_list .sources {
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -90,6 +97,6 @@
     margin-bottom: var(--normal-space);
   }
   #stocks_list .stocks .stock { 
-    width: 14%;
+    width: 20%;
   }
 }
