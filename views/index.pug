@@ -1,17 +1,16 @@
 extends layout.pug
 
 block append meta
-  title #{__(title)} | #{proj_name}
-  meta(name="description" content="")
-  meta(name="keywords" content="")
-  meta(name="robots" content="")
+  title #{proj_name} | Analisi di Borsa e Notizie in tempo reale
+  meta(name="description" content="Analisi tecniche, Informazioni e Rassegna Stampa dei titoli del FTSE Mib")
+  meta(name="keywords" content="analisi, tecnica, azioni, ftse, mib, titoli, notizie, borsa, informazioni, rassegna, stampa")
 
-  meta(name="og:url" content="")
-  meta(name="og:type" content="")
-  meta(name="og:title" content="")
-  meta(name="og:site_name" content="")
-  meta(name="og:description" content="")
-  meta(name="og:image" content="")
+  meta(name="og:url" content=proj_url)
+  meta(name="og:type" content="website")
+  meta(name="og:title" content=proj_name + ' | Analisi di Borsa e Notizie in tempo reale')
+  meta(name="og:site_name" content=proj_name)
+  meta(name="og:description" content="Analisi tecniche, Informazioni e Rassegna Stampa dei titoli del FTSE Mib")
+  meta(name="og:image" content="/assets/images/borsa-milano.jpg")
 
 block main 
   main
