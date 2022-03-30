@@ -42,6 +42,11 @@ function capitalize (text) {
   return words.join(' ')
 }
 
+function hasIsin (req, res, next) {
+  if (req.query.isin) return next()
+  res.render('404/404', { id: 'err404', title: 'Error 404' })
+}
+
 module.exports = app => {
   app.get('/', (req, res) => {
     res.locals.stocks = stocks
@@ -63,7 +68,7 @@ module.exports = app => {
     ]
     res.render('contatti/contatti', { id: 'contacts', title: 'Contacts', url: req.url, breadcrumbs })
   })
-  app.get('/analisi/:stock', (req, res) => {
+  app.get('/analisi/:stock', hasIsin, (req, res) => {
     const stock = {
       isin: req.query.isin,
       name: capitalize(req.params.stock)
