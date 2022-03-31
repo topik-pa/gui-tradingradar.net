@@ -5,3 +5,7 @@
 #err404 p {
   margin-bottom: 3rem;
 }
+
+#err404 footer .fb-like {
+  display: none;
+}
