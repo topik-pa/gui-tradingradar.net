@@ -17,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   font-weight: 500;
+  margin: 0;
 }
 
 #api_list .list ul li:nth-child(odd) {

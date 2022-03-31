@@ -53,7 +53,6 @@
 }
 #stock_info .analysis > div > div {
   width: 100%;
-  margin: 0 .7rem;
 }
 #stock_info .analysis > div > div > div{
   padding: var(--xx-small-space) .2rem;
@@ -105,5 +104,8 @@
   }
   #stock_info .analysis > div {
     flex-direction: column;
+  }
+  #stock_info .analysis > div > div {
+    margin: var(--normal-space) .7rem;
   }
 }
