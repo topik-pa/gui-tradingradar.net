@@ -71,7 +71,25 @@ module.exports = app => {
   app.get('/analisi/:stock', hasIsin, (req, res) => {
     const stock = {
       isin: req.query.isin,
-      name: capitalize(req.params.stock)
+      name: capitalize(req.params.stock),
+      encodedName: req.params.stock
+    }
+    const breadcrumbs = [
+      {
+        name: 'analysis',
+        url: '/#select_stock'
+      },
+      {
+        name: req.params.stock
+      }
+    ]
+    res.render('analisi/analisi', { id: 'analysis', title: 'Analysis', url: req.url, stock, breadcrumbs })
+  })
+  app.get('/stock/:stock', hasIsin, (req, res) => {
+    const stock = {
+      isin: req.query.isin,
+      name: capitalize(req.params.stock),
+      encodedName: req.params.stock
     }
     const breadcrumbs = [
       {

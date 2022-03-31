@@ -12,6 +12,8 @@ block append meta
   meta(name="og:description" content="Analisi titolo " + stock.name + " e Rassegna Stampa in tempo reale")
   meta(name="og:image" content=proj_url + "/assets/images/borsa-milano.jpg")
 
+  link(rel="canonical", href=proj_url + '/analisi/' + stock.encodedName + '?isin=' + stock.isin)
+
 block main 
   main
     include ../../components/analisi/stock_alerts/stock_alerts.pug
