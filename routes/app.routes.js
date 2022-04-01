@@ -95,6 +95,38 @@ module.exports = app => {
     res.render('analisi/analisi', { id: 'analysis', title: 'Analysis', url: req.url, stock, breadcrumbs })
   })
   /* REDIRECTS */
+  app.get('/en', (req, res) => {
+    res.locals.stocks = stocks
+    res.render('index', { id: 'home', title: 'Home', url: req.url })
+  })
+  app.get('/it', (req, res) => {
+    res.locals.stocks = stocks
+    res.render('index', { id: 'home', title: 'Home', url: req.url })
+  })
+  app.get('/fr', (req, res) => {
+    res.locals.stocks = stocks
+    res.render('index', { id: 'home', title: 'Home', url: req.url })
+  })
+  app.get('/market/', (req, res) => {
+    res.locals.stocks = stocks
+    res.render('index', { id: 'home', title: 'Home', url: req.url })
+  })
+  app.get('/market/:param', (req, res) => {
+    res.locals.stocks = stocks
+    res.render('index', { id: 'home', title: 'Home', url: req.url })
+  })
+  app.get('/market/en/:param', (req, res) => {
+    res.locals.stocks = stocks
+    res.render('index', { id: 'home', title: 'Home', url: req.url })
+  })
+  app.get('/market/it/:param', (req, res) => {
+    res.locals.stocks = stocks
+    res.render('index', { id: 'home', title: 'Home', url: req.url })
+  })
+  app.get('/market/fr/:param', (req, res) => {
+    res.locals.stocks = stocks
+    res.render('index', { id: 'home', title: 'Home', url: req.url })
+  })
   app.get('/stock/:param', (req, res) => {
     let stock, breadcrumbs
     if (req.query.isin) {
