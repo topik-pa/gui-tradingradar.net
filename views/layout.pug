@@ -8,6 +8,7 @@
   let googleSiteVerification = 'hl74Eak8YodPVXxEm6CpfxpYUWsdNTIiW4FGPEUIKE8'
   let sc_project = 11043457
   let sc_security = '9f87886c'
+  let GATagId = 'UA-109143172-1'
 
 doctype html
 html
@@ -33,11 +34,17 @@ html
     if prod
       div(id="fb-root")
       script(src='/dist/main.js')
-      script(async defer crossorigin="anonymous" src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v13.0&appId=" + fbAppId + "&autoLogAppEvents=1" nonce="MWhn9uhC")
+      script(async, defer, crossorigin="anonymous", src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v13.0&appId=" + fbAppId + "&autoLogAppEvents=1" nonce="MWhn9uhC")
       script.
         var sc_project = #{sc_project};
         var sc_invisible = 1;
         var sc_security = "#{sc_security}";
-      script(src='https://www.statcounter.com/counter/counter.js', async)
+      script(async, src='https://www.statcounter.com/counter/counter.js')
+      script(async, src="https://www.googletagmanager.com/gtag/js?id=" + GATagId)
+      script. 
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-109143172-1');
     else
       script(src='/scripts/index.js', type='module')

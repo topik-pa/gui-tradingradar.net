@@ -18,6 +18,7 @@
   display: flex;
   justify-content: space-between;
   font-weight: 500;
+  margin: 0;
 }
 
 #filters .list ul li:nth-child(1) {
