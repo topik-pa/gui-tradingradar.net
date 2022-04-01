@@ -138,7 +138,7 @@ function printNewsData () {
 
 const stockInfo = {
   init: async () => {
-    isin = new URLSearchParams(window.location.search).get('isin')
+    isin = new URLSearchParams(window.location.search).get('isin') || window.location.pathname.replace('/stock/', '')
     $root = document.getElementById('stock_info')
     if (isin) {
       await callTheApi('info')

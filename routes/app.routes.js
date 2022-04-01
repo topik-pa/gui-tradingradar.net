@@ -47,6 +47,15 @@ function hasIsin (req, res, next) {
   res.render('404/404', { id: 'err404', title: 'Error 404' })
 }
 
+function getStockNameFromIsin (isin) {
+  if (!stocks.length) return
+  for (const stock of stocks) {
+    if (stock.isin === isin) {
+      return stock.name
+    }
+  }
+}
+
 module.exports = app => {
   app.get('/', (req, res) => {
     res.locals.stocks = stocks
@@ -85,21 +94,41 @@ module.exports = app => {
     ]
     res.render('analisi/analisi', { id: 'analysis', title: 'Analysis', url: req.url, stock, breadcrumbs })
   })
-  app.get('/stock/:stock', hasIsin, (req, res) => {
-    const stock = {
-      isin: req.query.isin,
-      name: capitalize(req.params.stock),
-      encodedName: req.params.stock
-    }
-    const breadcrumbs = [
-      {
-        name: 'analysis',
-        url: '/#select_stock'
-      },
-      {
-        name: req.params.stock
+  /* REDIRECTS */
+  app.get('/stock/:param', (req, res) => {
+    let stock, breadcrumbs
+    if (req.query.isin) {
+      stock = {
+        isin: req.query.isin,
+        name: capitalize(req.params.param),
+        encodedName: req.params.param
       }
-    ]
+      breadcrumbs = [
+        {
+          name: 'analysis',
+          url: '/#select_stock'
+        },
+        {
+          name: req.params.param
+        }
+      ]
+    } else {
+      const name = getStockNameFromIsin(req.params.param)
+      stock = {
+        isin: req.params.param,
+        name: name,
+        encodedName: encodeURI(name.toLowerCase())
+      }
+      breadcrumbs = [
+        {
+          name: 'analysis',
+          url: '/#select_stock'
+        },
+        {
+          name: name
+        }
+      ]
+    }
     res.render('analisi/analisi', { id: 'analysis', title: 'Analysis', url: req.url, stock, breadcrumbs })
   })
 }
