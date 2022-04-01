@@ -5,7 +5,7 @@ block append meta
   meta(name="description" content="Analisi titolo " + stock.name + " e Rassegna Stampa in tempo reale") 
   meta(name="keywords" content=stock.name + ", analisi, informazioni, rassegna, stampa, titolo")
 
-  meta(name="og:url" content=proj_url + url)
+  meta(name="og:url" content=proj_url + '/analisi/' + stock.encodedName + '?isin=' + stock.isin)
   meta(name="og:type" content="website")
   meta(name="og:title" content=stock.name + " - Informazioni, Analisi Tecnica e Rassegna Stampa")
   meta(name="og:site_name" content=proj_name)
