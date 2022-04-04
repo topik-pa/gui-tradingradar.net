@@ -18,6 +18,9 @@ app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use('/assets', express.static(path.join(__dirname, 'assets')))
 app.use('/dist', express.static(path.join(__dirname, 'dist')))
 
+// For robots.txt
+app.use(express.static('public'))
+
 const i18n = new I18n({
   locales: ['en', 'it'],
   defaultLocale: 'it',
