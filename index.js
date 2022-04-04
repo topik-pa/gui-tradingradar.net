@@ -20,7 +20,7 @@ app.use('/dist', express.static(path.join(__dirname, 'dist')))
 
 const i18n = new I18n({
   locales: ['en', 'it'],
-  defaultLocale: 'en',
+  defaultLocale: 'it',
   directory: path.join(__dirname, 'locales')
 })
 app.use((req, res, next) => {

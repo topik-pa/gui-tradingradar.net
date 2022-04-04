@@ -107,7 +107,6 @@ module.exports = app => {
     res.locals.stocks = stocks
     res.render('index', { id: 'home', title: 'Home', url: req.url })
   })
-
   app.get('/en/analyses', (req, res) => {
     res.locals.stocks = stocks
     res.render('index', { id: 'home', title: 'Home', url: req.url })
@@ -120,7 +119,6 @@ module.exports = app => {
     res.locals.stocks = stocks
     res.render('index', { id: 'home', title: 'Home', url: req.url })
   })
-
   app.get('/market/', (req, res) => {
     res.locals.stocks = stocks
     res.render('index', { id: 'home', title: 'Home', url: req.url })

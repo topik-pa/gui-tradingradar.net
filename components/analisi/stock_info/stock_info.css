@@ -53,6 +53,7 @@
 }
 #stock_info .analysis > div > div {
   width: 100%;
+  margin: 0 var(--normal-space);
 }
 #stock_info .analysis > div > div > div{
   padding: var(--xx-small-space) .2rem;
@@ -96,6 +97,10 @@
   position: absolute;
   left: 0;
   top: 1.6rem;
+}
+
+#stock_info .info > p, #stock_info .analysis > p, #stock_info .news > p{
+  margin-bottom: var(--normal-space);
 }
 
 @media screen and (max-width: 768px) {
