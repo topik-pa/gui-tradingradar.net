@@ -34,9 +34,6 @@ app.use((req, res, next) => {
 // ROUTES
 require('./routes/stocks.routes')(app)
 require('./routes/app.routes')(app)
-app.get('*', function (req, res) {
-  res.render('404/404', { id: 'err404', title: 'Error 404' })
-})
 
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console

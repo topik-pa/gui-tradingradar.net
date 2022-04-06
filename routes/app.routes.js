@@ -180,4 +180,8 @@ module.exports = app => {
     }
     res.render('analisi/analisi', { id: 'analysis', title: 'Analysis', url: req.url, stock, breadcrumbs })
   })
+  app.get('*', function (req, res) {
+    res.locals.stocks = stocks
+    res.render('404/404', { id: 'err404', title: 'Error 404' })
+  })
 }
