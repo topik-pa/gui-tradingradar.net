@@ -158,6 +158,11 @@ module.exports = app => {
       ]
     } else {
       const name = getStockNameFromIsin(req.params.param)
+      if (!name) {
+        res.locals.stocks = stocks
+        res.render('index', { id: 'home', title: 'Home', url: req.url })
+        return
+      }
       stock = {
         isin: req.params.param,
         name: name,
