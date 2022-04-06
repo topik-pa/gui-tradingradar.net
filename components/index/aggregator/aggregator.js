@@ -19,7 +19,7 @@ function setAggregatorValue (aggregator) {
       }
       value += aggrValue
     }
-    aggregator.value = (value / length)
+    aggregator.value = (value / length).toFixed(2)
   }
 }
 function printAggregatorValue (aggregator) {
@@ -46,22 +46,22 @@ const aggregator = {
         get iconValue () {
           let iconValue
           switch (true) {
-          case (this.value > 10):
+          case (this.value > 14):
             iconValue = 5
             break
-          case (this.value > 5 && this.value <= 10):
+          case (this.value > 7 && this.value <= 14):
             iconValue = 4
             break
-          case (this.value >= 0 && this.value <= 5):
+          case (this.value >= 0 && this.value <= 7):
             iconValue = 3
             break
-          case (this.value < 0 && this.value >= -5):
+          case (this.value < 0 && this.value >= -7):
             iconValue = 2
             break
-          case (this.value < -5 && this.value >= -10):
+          case (this.value < -7 && this.value >= -14):
             iconValue = 1
             break
-          case (this.value < -10):
+          case (this.value < -14):
             iconValue = 0
             break
           default:
