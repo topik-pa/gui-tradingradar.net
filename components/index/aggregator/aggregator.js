@@ -2,7 +2,8 @@ let $root, cls, aggregators
 
 function setAggregatorValue (aggregator) {
   let value = 0
-  const length = aggregator.stocks.length
+  // const length = aggregator.stocks.length
+  let length = 0
   if (aggregator.name === 'tendency') {
     let tendencyUpCount = 0
     for (const stock of aggregator.stocks) {
@@ -10,13 +11,17 @@ function setAggregatorValue (aggregator) {
         tendencyUpCount++
       }
     }
-    aggregator.value = (length / tendencyUpCount).toFixed(2)
+    aggregator.value = (aggregator.stocks.length / tendencyUpCount).toFixed(2)
   } else {
     for (const stock of aggregator.stocks) {
       let aggrValue = stock[aggregator.name].value
+      if (!aggrValue) {
+        continue
+      }
       if (typeof aggrValue === 'string') {
         aggrValue = parseInt(aggrValue.replace(',', '.').replace('%', ''))
       }
+      length++
       value += aggrValue
     }
     aggregator.value = (value / length).toFixed(2)
