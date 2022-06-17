@@ -1,7 +1,6 @@
 import stocksList from '../components/index/stocks_list/stocks_list.js'
 import apiList from '../components/index/api_list/api_list.js'
 import aggregator from '../components/index/aggregator/aggregator.js'
-import filters from '../components/index/filters/filters.js'
 
 const api = JSON.parse(sessionStorage.getItem('localapi')) || [
   {
@@ -32,14 +31,6 @@ const api = JSON.parse(sessionStorage.getItem('localapi')) || [
     category: 'api',
     name: 'volatility',
     key: 'volatility',
-    qp: 'order=desc',
-    stocks: undefined,
-    status: 'idle'
-  },
-  {
-    category: 'api',
-    name: 'mfRsi',
-    key: 'milFin_rsi',
     qp: 'order=desc',
     stocks: undefined,
     status: 'idle'
@@ -107,7 +98,6 @@ const index = {
     stocksList.init()
     await apiList.init(api)
     aggregator.init(api)
-    await filters.init(api)
     sessionStorage.setItem('localapi', JSON.stringify(api))
   }
 }

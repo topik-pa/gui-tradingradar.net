@@ -12,7 +12,6 @@ module.exports = app => {
 
   // GET volatility, rsi, short tend stocks list
   router.get('/stocks/volatility', stocks.getStocksList)
-  router.get('/stocks/mfRsi', stocks.getStocksList)
   router.get('/stocks/shortTendency', stocks.getStocksList)
 
   // GET dividend and judgment
