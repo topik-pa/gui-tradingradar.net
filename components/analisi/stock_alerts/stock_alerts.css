@@ -1,9 +1,13 @@
 #stock_alerts  {
-  height: 0;
-  overflow-y: hidden;
-  transition: height .8s;
-  margin: 0;
-  padding: 0 var(--view-padding);
+  transition: bottom .8s;
+  padding: var(--view-padding);
+  position: fixed;
+  bottom: -15rem;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--light-gray);
+  background-color: var(--lighter-gray);
+  z-index: 9;
 }
 
 #stock_alerts h3 {
@@ -25,7 +29,5 @@
 }
 
 #stock_alerts.show {
-  height: 11rem;
-  overflow-y: auto;
-  border-bottom: 1px solid var(--light-gray);
+  bottom: 0;
 }
