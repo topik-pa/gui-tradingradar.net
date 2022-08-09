@@ -106,7 +106,6 @@ function printAnalysisData () {
   $mf.querySelector('a').href = data.analysis.body.milFin_mfRanking?.source
   $mf.querySelector('.rating span').innerText = data.analysis.body.milFin_mfRanking?.value
   $mf.querySelector('.risk span').innerText = data.analysis.body.milFin_mfRisk?.value
-  $mf.querySelector('.rsi span').innerText = data.analysis.body.milFin_mfRsi?.value
 
   const $sol = $analysis.querySelector('.soldi-on-line-logo')
   $sol.querySelector('a').href = data.analysis.body.sol_lastTargetPrice?.source
