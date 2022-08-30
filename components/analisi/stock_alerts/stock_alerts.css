@@ -15,6 +15,15 @@
   margin-bottom: var(--normal-space);
 }
 
+#stock_alerts i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: var(--view-padding);
+  color: var(--gray);
+  cursor: pointer;
+}
+
 #stock_alerts .alert {
   margin: 0;
   padding: var(--xx-small-space) 0;

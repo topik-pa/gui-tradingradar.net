@@ -2,4 +2,7 @@
   border-top: 1px solid var(--darker-gray);
   background-color: var(--light-gray);
   padding: 1rem;
+
+  position: relative;
+  z-index: 9;
 }

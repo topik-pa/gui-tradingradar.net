@@ -45,6 +45,9 @@ const stockAlerts = {
   init: async (data) => {
     $root = document.getElementById('stock_alerts')
     printAlerts(data)
+    $root.querySelector('i.icon-close').addEventListener('click', () => {
+      $root.classList.remove('show')
+    })
   }
 }
 
