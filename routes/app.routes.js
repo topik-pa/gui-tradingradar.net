@@ -55,6 +55,14 @@ function getStockNameFromIsin (isin) {
     }
   }
 }
+function getStockCodeFromIsin (isin) {
+  if (!stocks.length) return
+  for (const stock of stocks) {
+    if (stock.isin === isin) {
+      return stock.code
+    }
+  }
+}
 
 module.exports = app => {
   app.get('/', (req, res) => {
@@ -78,10 +86,12 @@ module.exports = app => {
     res.render('contatti/contatti', { id: 'contacts', title: 'Contacts', url: req.url, breadcrumbs })
   })
   app.get('/analisi/:stock', hasIsin, (req, res) => {
+    const code = getStockCodeFromIsin(req.query.isin)
     const stock = {
       isin: req.query.isin,
       name: capitalize(req.params.stock),
-      encodedName: req.params.stock
+      encodedName: req.params.stock,
+      code: code
     }
     const breadcrumbs = [
       {
