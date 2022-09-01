@@ -103,6 +103,17 @@
   margin-bottom: var(--normal-space);
 }
 
+#stock_info .share {
+  margin: var(--xx-large-space) 0;
+  background-color: var(--lighter-gray);
+  padding: var(--x-large-space);
+}
+#stock_info .share > div{
+  display: flex;
+  justify-content: center;
+  margin: var(--xx-large-space) 0;
+}
+
 @media screen and (max-width: 768px) {
   #stock_info .second {
     flex-direction: column;

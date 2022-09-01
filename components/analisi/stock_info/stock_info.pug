@@ -112,6 +112,12 @@ section(id="stock_info")
         div(class="trend") Trend: 
           span        
 
+  div(class="share")
+    h2 Prima di continuare: non dimenticare di condividere questa pagina...
+    p Queste informazioni ti sono state utili? #[em Condividile] con i tuoi contatti!
+    div(class="fb-share-button" data-href=(proj_url + '/analisi/' + stock.encodedName + '?isin=' + stock.isin) data-layout="button_count" data-size="large")
+      a(target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore") Condividi
+
   div(class="news")
     h2 Rassegna Stampa #{stock.name}
     p Le #[em ultime notizie] sul titolo #{stock.name} prese in tempo reale dalle nostre fonti esterne.
