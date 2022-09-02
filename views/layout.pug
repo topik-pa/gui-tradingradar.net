@@ -2,6 +2,7 @@
   let prod = process.env.NODE_ENV === 'production'
   let proj_name = 'tradingradar.net'
   let proj_url = 'https://www.tradingradar.net'
+  let description = 'Analisi tecniche, Informazioni e Rassegna Stampa dei titoli del FTSE Mib'
   let copy = 2022
   let owner = 'Marco Pavan'
   let fbAppId = 238576103449837
@@ -35,7 +36,23 @@ html(lang=locale)
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'UA-109143172-1');
-        script(defer, type='application/ld+json' src='/assets/scripts/microdata.js')
+        script(type='application/ld+json').
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "#{proj_url}",
+            "name": "#{proj_name}",
+            "description": "#{description}",
+            "image": "https://www.tradingradar.net/assets/images/logo.png",
+            "author": {
+              "@type": "Person",
+              "name": "#{owner}"
+            },
+            "copyrightHolder": {
+              "@type": "Person",
+              "name": "#{owner}"
+            }
+          }
     else
         link(rel="stylesheet", type="text/css", href="/styles/style.css")
         script(src='/scripts/index.js', type='module')
