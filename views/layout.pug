@@ -22,8 +22,23 @@ html(lang=locale)
     link(rel="shortcut icon", href="/public/favicon.ico", type="image/x-icon")
     if prod
         link(rel="stylesheet", type="text/css", href="/dist/main.css")
+        script(defer, src='/dist/main.js')
+        script(async, defer, crossorigin="anonymous", src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v13.0&appId=" + fbAppId + "&autoLogAppEvents=1" nonce="MWhn9uhC")
+        script(async, defer, src='https://www.statcounter.com/counter/counter.js')
+        script(async, defer, src="https://www.googletagmanager.com/gtag/js?id=" + GATagId)
+        script.
+          var sc_project = #{sc_project};
+          var sc_invisible = 1;
+          var sc_security = "#{sc_security}";
+        script. 
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-109143172-1');
+        script(defer, type='application/ld+json' src='/assets/scripts/microdata.js')
     else
         link(rel="stylesheet", type="text/css", href="/styles/style.css")
+        script(src='/scripts/index.js', type='module')
   body(id=id)
     include ../components/shared/header/header.pug
     block main
@@ -31,20 +46,5 @@ html(lang=locale)
       include ../components/shared/footer/footer.pug
       include ../components/shared/cookie_layer/cookie_layer.pug
       include ../components/shared/goto_top/goto_top.pug
-    if prod
-      div(id="fb-root")
-      script(src='/dist/main.js')
-      script(async, defer, crossorigin="anonymous", src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v13.0&appId=" + fbAppId + "&autoLogAppEvents=1" nonce="MWhn9uhC")
-      script.
-        var sc_project = #{sc_project};
-        var sc_invisible = 1;
-        var sc_security = "#{sc_security}";
-      script(async, src='https://www.statcounter.com/counter/counter.js')
-      script(async, src="https://www.googletagmanager.com/gtag/js?id=" + GATagId)
-      script. 
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-109143172-1');
-    else
-      script(src='/scripts/index.js', type='module')
+    div(id="fb-root")
+
