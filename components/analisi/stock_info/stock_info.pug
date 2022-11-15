@@ -3,7 +3,7 @@ section(id="stock_info")
   img(src=('/assets/images/stocks/' + stock.code + '-min.png'), alt=stock.name)
   h1 #[span #{stock.name}] - Informazioni, Analisi Tecnica e Rassegna Stampa
   h3 Tutti i dati sono forniti in #[em tempo reale] interrogando direttamente le fonti originali
-  div(class="info")
+  div(class="info loading")
     h2 Informazioni #{stock.name}
     p Valore e data del #[em dividendo]; le #[em medie mobili] a 20, 40 e 100 giorni; i #[em massimi e minimi] (assoluti e relativi all'ultimo anno) e le #[em performance] fatte registrare dal titolo #{stock.name}.
     div 
@@ -63,53 +63,63 @@ section(id="stock_info")
               span
             div(class="perf1Y") Performance (1 anno): 
               span
-  div(class="analysis")
+  div(class="analysis loading")
     h2 Analisi Tecnica #{stock.name}
     p Le #[em analisi tecniche] su #{stock.name} dei principali analisti online: #[em target price, resistenze, supporti, RSI, rating e giudizi complessivi].
     div 
       div(class="borsa-italiana-logo img_icon")
         h3 
           a(href="#", target="_blank", rel="noopener noreferrer") Borsa Italiana
-        div(class="resistance") Resistenza (€): 
-          span
-        div(class="support") Supporto (€): 
-          span
-        div(class="rsi") RSI: 
-          span
-        div(class="evaluation") Valutazione: 
-          span
-        div(class="rating") Rating [0-4]: 
-          span
+        ul
+          li(class="resistance") Resistenza (€): 
+            span
+          li(class="support") Supporto (€): 
+            span
+          li(class="rsi") RSI: 
+            span
+          li(class="evaluation") Valutazione: 
+            span
+          li(class="rating") Rating [0-4]: 
+            span
+        p Analisi completa su #[a(href="#", title="Vai alla pagina originale" target="_blank", rel="noopener noreferrer") Borsa Italiana]
       div(class="il-sole-24-ore-logo img_icon")
         h3 
           a(href="#", target="_blank", rel="noopener noreferrer") Il Sole 24 Ore
-        div(class="short-tend") Tendenza breve periodo: 
-          span
-        div(class="med-tend") Tendenza medio periodo: 
-          span
+        ul
+          li(class="short-tend") Tendenza breve periodo: 
+            span
+          li(class="med-tend") Tendenza medio periodo: 
+            span
+        p Analisi completa su #[a(href="#", title="Vai alla pagina originale" target="_blank", rel="noopener noreferrer") Il Sole 24 Ore]
       div(class="milano-finanza-logo img_icon")
         h3 
           a(href="#", target="_blank", rel="noopener noreferrer") Milano Finanza
-        div(class="rating") Rating [A-E]: 
-          span
-        div(class="risk") Risk [0-100]: 
-          span               
+        ul
+          li(class="rating") Rating [A-E]: 
+            span
+          li(class="risk") Risk [0-100]: 
+            span
+        p Analisi completa su #[a(href="#", title="Vai alla pagina originale" target="_blank", rel="noopener noreferrer") Milano Finanza]           
       div(class="soldi-on-line-logo img_icon")
         h3 
           a(href="#", target="_blank", rel="noopener noreferrer") SoldiOnLine
-        div(class="target") Target price (€): 
-          span
-        div(class="evaluation") Giudizio: 
-          span      
+        ul
+          li(class="target") Target price (€): 
+            span
+          li(class="evaluation") Giudizio: 
+            span
+        p Analisi completa su #[a(href="#", title="Vai alla pagina originale" target="_blank", rel="noopener noreferrer") SoldiOnLine]  
       div(class="teleborsa-logo img_icon")
         h3 
           a(href="#", target="_blank", rel="noopener noreferrer") Teleborsa
-        div(class="resistance") Resistenza (€): 
-          span
-        div(class="support") Supporto (€): 
-          span
-        div(class="trend") Trend: 
-          span        
+        ul
+          li(class="resistance") Resistenza (€): 
+            span
+          li(class="support") Supporto (€): 
+            span
+          li(class="trend") Trend: 
+            span
+        p Analisi completa su #[a(href="#", title="Vai alla pagina originale" target="_blank", rel="noopener noreferrer") Teleborsa]    
 
   div(class="share")
     h2 Prima di continuare: non dimenticare di condividere questa pagina...
@@ -117,7 +127,7 @@ section(id="stock_info")
     div(class="fb-share-button" data-href=(proj_url + '/analisi/' + stock.encodedName + '?isin=' + stock.isin) data-layout="button_count" data-size="large")
       a(target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore") Condividi
 
-  div(class="news")
+  div(class="news loading")
     h2 Rassegna Stampa #{stock.name}
     p Le #[em ultime notizie] sul titolo #{stock.name} prese in tempo reale dalle nostre fonti esterne.
     ul 

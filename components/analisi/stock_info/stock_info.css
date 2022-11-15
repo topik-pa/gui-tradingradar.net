@@ -60,13 +60,20 @@
   width: 100%;
   margin: 0 var(--normal-space);
 }
-#stock_info .analysis > div > div > div{
+#stock_info .analysis ul {
+  margin: 0;
+}
+#stock_info .analysis li{
   padding: var(--xx-small-space) .2rem;
+  margin: 0;
   display: flex;
   justify-content: space-between;
 }
-#stock_info .analysis > div > div > div:nth-child(odd) {
+#stock_info .analysis li:nth-child(odd) {
   background-color: var(--light-gray);
+}
+#stock_info .analysis p {
+  margin-top: var(--normal-space);
 }
 #stock_info .analysis .borsa-italiana-logo .evaluation, #stock_info .analysis .borsa-italiana-logo .evaluation span {
   display: block;
@@ -128,5 +135,11 @@
   }
   #stock_info .analysis > div > div {
     margin: var(--normal-space) .7rem;
+  }
+  #stock_info .second > div {
+    width: auto;
+  }
+  #stock_info .analysis > div > div {
+    width: auto;
   }
 }
