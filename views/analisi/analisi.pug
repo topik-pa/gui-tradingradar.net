@@ -14,6 +14,33 @@ block append meta
 
   link(rel="canonical", href=proj_url + '/analisi/' + stock.encodedName + '?isin=' + stock.isin)
 
+  if prod
+    script(type='application/ld+json').
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "#{proj_url}/analisi/#{stock.encodedName}?isin=#{stock.isin}"
+        },
+        "headline": "#{stock.name} - Informazioni, Analisi Tecnica, Target e Rassegna Stampa",
+        "image": "https://www.tradingradar.net/assets/images/stocks/#{stock.code}-min.png",  
+        "author": {
+          "@type": "Person",
+          "name": "#{owner}"
+        },  
+        "publisher": {
+          "@type": "Organization",
+          "name": "#{proj_name}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.tradingradar.net/assets/images/logo.png"
+          }
+        },
+        "datePublished": "2022-01-01",
+        "dateModified": "2022-11-15"
+      }
+
 block main 
   main
     include ../../components/analisi/stock_alerts/stock_alerts.pug
