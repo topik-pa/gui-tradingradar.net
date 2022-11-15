@@ -1,7 +1,7 @@
 aside(id="stock_alerts")
   h3 Alert generati
   i(class="icon-close")
-  p In base al prezzo attuale, il titolo #{stock.name} ha generato i seguenti alert:
+  p In base al prezzo attuale (€#[span(id="last-price")]), il titolo #{stock.name} ha generato i seguenti alert:
   p(id="a1", class="alert green hide") Il prezzo è superiore alla media a 20gg
   p(id="a2", class="alert red hide") Il prezzo è inferiore alla media a 20gg
   p(id="a3", class="alert green hide") Il prezzo è superiore alla media a 40gg

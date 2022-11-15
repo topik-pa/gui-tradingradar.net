@@ -9,11 +9,15 @@ function printAlerts (data) {
   const $a6 = $root.querySelector('#a6')
   const $a7 = $root.querySelector('#a7')
   const $a8 = $root.querySelector('#a8')
+  const $lp = $root.querySelector('#last-price')
 
   const lastPrice = data.info.body.lastPrice.value
   if (!lastPrice) {
     return
   }
+
+  $lp.innerText = lastPrice
+
   if (lastPrice >= data.info.body.mm20days.value) {
     $a1.classList.remove('hide')
   } else {

@@ -3,8 +3,13 @@
   margin: var(--xx-small-space) 0;
 }
 
-#stock_info  {
+#stock_info > img {
+  border: 1px solid var(--black);
+}
 
+#stock_info div:not(.share) h2 {
+  border-bottom: 1px solid var(--gray);
+  margin-top: var(--xxx-large-space)
 }
 
 #stock_info h1 span {
