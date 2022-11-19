@@ -20,6 +20,10 @@
   margin: 0;
 }
 
+#api_list .list ul li a {
+  margin-right: 1rem;
+}
+
 #api_list .list ul li:nth-child(odd) {
   background-color: var(--light-gray);
 }

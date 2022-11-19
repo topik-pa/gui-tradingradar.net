@@ -23,13 +23,13 @@ function getStocksList () {
       try {
         stocks = JSON.parse(body)
       } catch (error) {
-        console.err(error)
+        console.error(error)
       }
     })
   })
   request.end()
   request.on('error', error => {
-    console.err(error)
+    console.error(error)
   })
 }
 getStocksList()

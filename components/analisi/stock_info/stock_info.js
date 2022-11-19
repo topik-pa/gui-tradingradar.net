@@ -111,10 +111,12 @@ function printAnalysisData () {
   $mf.querySelector('.risk span').innerText = data.analysis.body.milFin_mfRisk?.value
 
   const $sol = $analysis.querySelector('.soldi-on-line-logo')
-  $sol.querySelector('a').href = data.analysis.body.sol_lastTargetPrice?.source
-  $sol.querySelector('p a').href = data.analysis.body.sol_lastTargetPrice?.source
-  $sol.querySelector('.target span').innerText = data.analysis.body.sol_lastTargetPrice?.value
-  $sol.querySelector('.evaluation span').innerText = data.analysis.body.sol_lastJudgment?.value
+  $sol.querySelector('a').href = data.analysis.body.sol_lastJudgment?.source
+  $sol.querySelector('p a').href = data.analysis.body.sol_lastJudgment?.source
+  $sol.querySelector('.date span').innerText = data.analysis.body.sol_lastJudgment?.value[0]
+  $sol.querySelector('.bank span').innerText = data.analysis.body.sol_lastJudgment?.value[1]
+  $sol.querySelector('.evaluation span').innerText = data.analysis.body.sol_lastJudgment?.value[2]
+  $sol.querySelector('.target span').innerText = data.analysis.body.sol_lastJudgment?.value[3]
 
   const $teleborsa = $analysis.querySelector('.teleborsa-logo')
   $teleborsa.querySelector('a').href = data.analysis.body.teleb_tbResistance?.source

@@ -39,6 +39,10 @@ li {
   margin: var(--x-small-space);
 }
 
+small {
+  font-size: var(--font-size-very-small);
+}
+
 .hide {
   display: none!important;
 }
