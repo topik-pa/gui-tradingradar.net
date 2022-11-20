@@ -87,10 +87,15 @@ module.exports = app => {
   })
   app.get('/analisi/:stock', hasIsin, (req, res) => {
     const code = getStockCodeFromIsin(req.query.isin)
+    if (!code) {
+      res.render('404/404', { id: 'err404', title: 'Error 404' })
+      return
+    }
+    const name = getStockNameFromIsin(req.query.isin) || ''
     const stock = {
       isin: req.query.isin,
-      name: capitalize(req.params.stock),
-      encodedName: req.params.stock,
+      name: name,
+      encodedName: encodeURI(name.toLowerCase().replace(/ /g, '-')),
       code: code
     }
     const breadcrumbs = [

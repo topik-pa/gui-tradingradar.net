@@ -38,7 +38,7 @@ function printApiFiltersInPage (filter) {
       const $a = document.createElement('a')
       $a.innerText = stock.name
       $a.title = stock.name
-      $a.href = `/analisi/${encodeURI(stock.name.toLowerCase())}?isin=${stock.isin}`
+      $a.href = `/analisi/${encodeURI(stock.name.toLowerCase().replace(/ /g, '-'))}?isin=${stock.isin}`
       const $span1 = document.createElement('span')
       $span1.innerText = stock[filter.key1].value
       const $span2 = document.createElement('span')
