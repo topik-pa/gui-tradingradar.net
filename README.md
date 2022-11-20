@@ -19,3 +19,17 @@ git push -u origin main
 
 
 https://eslint.org/docs/user-guide/getting-started
+
+
+
+### TODO
+Link a sottosezioni in HP
+Segnali giornalieri
+Pagare per analisi titolo (con storico)
+Microdata
+3 livelli patreon
+Aggiungere stock minori per aumentare visibilità e accessi
+
+Sistemare la sitemap.xml
+HP header conslider etc...
+Box rimandi ad altri stock in stock analisi page
