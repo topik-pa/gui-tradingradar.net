@@ -7,7 +7,7 @@
   right: 0;
   border-top: 1px solid var(--light-gray);
   background-color: var(--lighter-gray);
-  z-index: 9;
+  z-index: 99;
 }
 
 #stock_alerts h3 {
