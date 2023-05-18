@@ -1,3 +1,74 @@
-#home main section:nth-child(even) {
+#home main > section:nth-child(even) {
   background-color: var(--lighter-gray);
+}
+
+#intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#intro > div:first-child{
+  padding-right: var(--xxx-large-space);
+}
+
+#intro .sources {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--large-space);
+  flex-wrap: wrap;
+}
+
+#intro .sources .source {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-very-small);
+  margin-right: var(--x-small-space);
+  margin-bottom: var(--x-small-space);
+}
+
+
+#alerts > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#alerts .alert {
+  width: 23%;
+  font-size: var(--font-size-small);
+}
+#alerts h3 {
+  margin: 0 0 var(--small-space);
+}
+#alerts h5 {
+  font-style: italic;
+}
+#alerts a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#alerts img {
+  margin: var(--normal-space) 0;
+}
+#alerts p {
+  height: 3.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  #alerts .alert {
+    width: 48%;
+    margin-bottom: var(--xx-large-space);
+  }
+
+  #rapidapi {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #mainsources {
+    display: none;
+  }
 }

@@ -40,48 +40,51 @@ section(id="api_list")
     li Filtraggio dei dati 
     li Paginazione dei dati
   p Gli sviluppatori interessati possono accedere alle API tramite il servizio fornito da #[a(href="https://rapidapi.com", title="RapidAPI", target="_blank", rel="noopener noreferrer") RapidAPI].
-  h3 Performance a 1 mese / 6 mesi / 1 anno dei titoli del FTSE Mib
-  div(class="desc") 
-    p Elenco dei titoli azionari italiani che hanno avuto #[em le performance migliori (o peggiori)] nell'ultimo mese, 6 mesi o anno. #[br]Nei casi limite, si tratta di quei titoli che avendo avuto una performance molto positiva (o molto negativa) potrebbero, ora, essere sul punto di iniziare un #[em nuovo corso laterale] (trendline) in attesa di riprendere il movimento precedente,  oppure di inizare un #[em nuovo movimento in senso inverso]. 
-    p(class="source") Fonte: Borsa Italiana
-  div(id="performance")
-    div(class="list")
-      div(class="perf1M")
-        h4 Performance 1 mese
-        ul
-      div(class="perf6M")
-        h4 Performance 6 mesi
-        ul
-      div(class="perf1Y")
-        h4 Performance 1 anno
-        ul
-  h3 Volatilità e Tendenza a breve termine
-  div(class="desc") 
-    p I titoli del FTSE Mib ordinati per volatilità, Relative Strenght Index (o Indice di Forza Relativa) e Tendenza a breve termine.
-    h4 Volatilità
-    p Una #[em alta volatilità] è indice di titoli che hanno avuto #[em movimenti di prezzo piuttosto ampi] nell'ultimo periodo, indicazione del fatto che esiste un certo interesse del mercato.
-    h4 Tendenza a breve termine
-    p La tendeza a breve termine per il titolo secondo le analisi degli esperti de "Il Sole 24 Ore"
-    p(class="source") Fonte: Borsa Italiana, Milano Finanza e Il Sole 24 Ore
-  div(id="volatility")
-    div(class="list")
-      div(class="volatility")
-        h4 Volatilità
-        ul
-      div(class="shortTendency")
-        h4 Tendenza a breve termine
-        ul
-  h3 Dividendi e Raccomandazioni delle banche di affari
-  div(class="desc")
-    p I titoli del FTSE Mib ordinati per valore del #[em dividendo] e #[em raccomandazione] data dalle principali Banche di Affari.
-    p(class="source") Fonte: Milano Finanza e SoldiOnLine
-  div(id="dividend")
-    div(class="list")
-      div(class="divYield")
-        h4 Dividendo (% sul prezzo)
-        ul
-      div(class="lastJudgment")
-        h4 Ultima raccomandazione 
-          small (Data - Banca - Giudizio - Target price)
-        ul     
+  section
+    h3 Performance a 1 mese / 6 mesi / 1 anno dei titoli del FTSE Mib
+    div(class="desc") 
+      p Elenco dei titoli azionari italiani che hanno avuto #[em le performance migliori (o peggiori)] nell'ultimo mese, 6 mesi o anno. #[br]Nei casi limite, si tratta di quei titoli che avendo avuto una performance molto positiva (o molto negativa) potrebbero, ora, essere sul punto di iniziare un #[em nuovo corso laterale] (trendline) in attesa di riprendere il movimento precedente,  oppure di inizare un #[em nuovo movimento in senso inverso]. 
+      p(class="source") Fonte: Borsa Italiana
+    div(id="performance")
+      div(class="list")
+        div(class="perf1M")
+          h4 Performance 1 mese
+          ul
+        div(class="perf6M")
+          h4 Performance 6 mesi
+          ul
+        div(class="perf1Y")
+          h4 Performance 1 anno
+          ul
+  section
+    h3 Volatilità e Tendenza a breve termine
+    div(class="desc") 
+      p I titoli del FTSE Mib ordinati per volatilità, Relative Strenght Index (o Indice di Forza Relativa) e Tendenza a breve termine.
+      h4 Volatilità
+      p Una #[em alta volatilità] è indice di titoli che hanno avuto #[em movimenti di prezzo piuttosto ampi] nell'ultimo periodo, indicazione del fatto che esiste un certo interesse del mercato.
+      h4 Tendenza a breve termine
+      p La tendeza a breve termine per il titolo secondo le analisi degli esperti de "Il Sole 24 Ore"
+      p(class="source") Fonte: Borsa Italiana, Milano Finanza e Il Sole 24 Ore
+    div(id="volatility")
+      div(class="list")
+        div(class="volatility")
+          h4 Volatilità
+          ul
+        div(class="shortTendency")
+          h4 Tendenza a breve termine
+          ul
+  section
+    h3 Dividendi e Raccomandazioni delle banche di affari
+    div(class="desc")
+      p I titoli del FTSE Mib ordinati per valore del #[em dividendo] e #[em raccomandazione] data dalle principali Banche di Affari.
+      p(class="source") Fonte: Milano Finanza e SoldiOnLine
+    div(id="dividend")
+      div(class="list")
+        div(class="divYield")
+          h4 Dividendo (% sul prezzo)
+          ul
+        div(class="lastJudgment")
+          h4 Ultima raccomandazione 
+            small (Data - Banca - Giudizio - Target price)
+          ul     
 

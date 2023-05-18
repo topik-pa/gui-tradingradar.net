@@ -29,5 +29,7 @@ module.exports = app => {
   router.get('/analysis/:isin', stocks.getStocksList)
   router.get('/news/:isin', stocks.getStocksList)
 
+  router.get('/custom', stocks.getStocksList)
+
   app.use('/api', router)
 }
