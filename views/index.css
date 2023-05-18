@@ -27,32 +27,32 @@
 }
 
 
-#alerts > div {
+#hp-alerts > div {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
 }
-#alerts .alert {
+#hp-alerts .alert {
   width: 23%;
   font-size: var(--font-size-small);
 }
-#alerts h3 {
+#hp-alerts h3 {
   margin: 0 0 var(--small-space);
 }
-#alerts h5 {
+#hp-alerts h5 {
   font-style: italic;
 }
-#alerts a {
+#hp-alerts a {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#alerts img {
+#hp-alerts img {
   margin: var(--normal-space) 0;
 }
-#alerts p {
+#hp-alerts p {
   height: 3.5rem;
 }
 
