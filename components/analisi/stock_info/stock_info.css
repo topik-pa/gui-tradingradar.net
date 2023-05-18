@@ -16,6 +16,10 @@
   font-weight: 500;
 }
 
+#stock_info h3 {
+  margin: var(--large-space) 0 var(--xx-small-space);
+}
+
 #stock_info {
   line-height: 125%;
 }
@@ -108,7 +112,9 @@
 #stock_info .img_icon::before {
   position: absolute;
   left: 0;
-  top: 1.6rem;
+  top: .9rem;
+  width: var(--x-large-space);
+  height: var(--x-large-space);
 }
 
 #stock_info .info > p, #stock_info .analysis > p, #stock_info .news > p{

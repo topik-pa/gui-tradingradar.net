@@ -11,6 +11,10 @@
 #hp-alerts h3 {
   margin: 0 0 var(--small-space);
 }
+#hp-alerts h4 {
+  white-space: nowrap;
+  overflow: hidden;
+}
 #hp-alerts h5 {
   font-style: italic;
 }

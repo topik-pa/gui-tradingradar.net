@@ -1,11 +1,12 @@
 import api from '../../../scripts/api.js'
-const $alerts = document.getElementById('hp-alerts')
-const $gcup = $alerts.querySelector('.gcup')
-const $gcdown = $alerts.querySelector('.gcdown')
-const $tiup = $alerts.querySelector('.tiup')
-const $tidown = $alerts.querySelector('.tidown')
 
 const getHpAlerts = async () => {
+  const $alerts = document.getElementById('hp-alerts')
+  const $gcup = $alerts.querySelector('.gcup')
+  const $gcdown = $alerts.querySelector('.gcdown')
+  const $tiup = $alerts.querySelector('.tiup')
+  const $tidown = $alerts.querySelector('.tidown')
+
   $alerts.classList.add('loading')
   try {
     const request = await api.get('api/custom')
