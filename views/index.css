@@ -26,42 +26,7 @@
   margin-bottom: var(--x-small-space);
 }
 
-
-#hp-alerts > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-#hp-alerts .alert {
-  width: 23%;
-  font-size: var(--font-size-small);
-}
-#hp-alerts h3 {
-  margin: 0 0 var(--small-space);
-}
-#hp-alerts h5 {
-  font-style: italic;
-}
-#hp-alerts a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#hp-alerts img {
-  margin: var(--normal-space) 0;
-}
-#hp-alerts p {
-  height: 3.5rem;
-}
-
 @media screen and (max-width: 1024px) {
-  #hp-alerts .alert {
-    width: 48%;
-    margin-bottom: var(--xx-large-space);
-  }
-
   #rapidapi {
     display: none;
   }
