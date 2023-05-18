@@ -57,7 +57,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  #alerts .alert {
+  #hp-alerts .alert {
     width: 48%;
     margin-bottom: var(--xx-large-space);
   }
