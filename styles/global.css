@@ -14,21 +14,33 @@ a {
   text-decoration: none;
 }
 
-em {
+em, .em {
   font-weight: 500;
+}
+
+.green {
+  color: var(--green);
+}
+.red {
+  color: var(--red);
+}
+.blue {
+  color: var(--blue);
 }
 
 p {
   margin-bottom: var(--x-small-space);
-  line-height: 110%;
+  line-height: 130%;
 }
 
 main {
-  padding-top: var(--view-padding);
+  /* padding: var(--view-padding); */
 }
-main section {
-  margin-bottom: var(--section-margin);
+main > section {
   padding: var(--view-padding);
+}
+main section:not(:last-child) {
+  margin-bottom: var(--section-margin);
 }
 
 ul {
@@ -51,8 +63,8 @@ small {
 .img_icon::before {
   content: ' ';
   display: block;
-  width: var(--x-large-space);
-  height: var(--x-large-space);
+  width: var(--xx-large-space);
+  height: var(--xx-large-space);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
