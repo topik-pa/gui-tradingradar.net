@@ -15,7 +15,7 @@
 }
 
 #in-trend-stocks table th, td {
-  padding: var(--xx-small-space)var(--normal-space);
+  padding: var(--x-small-space) var(--normal-space);
   text-align: left;
   padding-left: 0;
 }
