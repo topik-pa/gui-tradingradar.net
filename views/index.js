@@ -1,4 +1,4 @@
-import api from '../../../scripts/api.js'
+import api from '../scripts/api.js'
 import hpAlerts from '../components/index/hp-alerts/hp-alerts.js'
 import inTrendStocks from '../components/index/inTrendStocks/inTrendStocks.js'
 import stocksList from '../components/index/stocks_list/stocks_list.js'
