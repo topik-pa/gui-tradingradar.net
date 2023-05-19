@@ -32,6 +32,7 @@
 @import "/components/index/aggregator/aggregator.css";
 @import "/components/index/filters/filters.css";
 @import "/components/index/hp-alerts/hp-alerts.css";
+@import "/components/index/inTrendStocks/inTrendStocks.css";
 @import "/views/404/404.css";
 
 @import "./responsive.css";
