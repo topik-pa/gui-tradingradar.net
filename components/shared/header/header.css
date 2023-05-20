@@ -1,14 +1,25 @@
-header section {
+header section:not(#supportme) {
   padding: 5px var(--view-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header section:nth-child(1) {
+header section:nth-child(2) {
   background-color: var(--darker-gray);
 }
-header section:nth-child(2) {
+header section:nth-child(3) {
   position: relative;
   border-bottom: 1px solid var(--blue);
+}
+
+
+#supportme {
+  padding: 5px var(--view-padding);
+  text-align: center;
+  border: 1px solid var(--red);
+}
+#supportme progress {
+  margin: 0 auto;
+  width: 20%;
 }
