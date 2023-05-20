@@ -1,0 +1,16 @@
+section(id="support")
+    h2 Supporta il progetto tradingradar.net condividendo questa pagina o effettuando una donazione
+    p Se le informazioni che hai ottenuto sono state utili, non dimenticare di contribuire al mantenimento e alla crescita di questo progetto!
+    h3 Condividi
+    div 
+      div
+        div(class="fb-share-button" data-href=(proj_url + url) data-layout="button_count" data-size="large")
+          a(target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore") 
+      div
+        div(class="fb-like" data-href=(proj_url + url) data-width="" data-layout="button" data-action="like" data-size="large" data-share="false")
+    
+    h3 Dona tramite PayPal
+    div 
+      form(action="https://www.paypal.com/donate", method="post", target="_top")
+        input(type="hidden", name="hosted_button_id", value="LFRZ776BAZ2TL")
+        input(type="image", src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif", name="submit", title="PayPal - The safer, easier way to pay online!", alt="Donate with PayPal button")

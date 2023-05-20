@@ -123,14 +123,8 @@ section(id="stock_info")
             span
           li(class="trend") Trend: 
             span
-        p Analisi completa su #[a(href="#", title="Vai alla pagina originale" target="_blank", rel="noopener noreferrer") Teleborsa]    
-
-  div(class="share")
-    h2 Prima di continuare: non dimenticare di condividere questa pagina...
-    p Queste informazioni ti sono state utili? #[em Condividile] con i tuoi contatti!
-    div(class="fb-share-button" data-href=(proj_url + '/analisi/' + stock.encodedName + '?isin=' + stock.isin) data-layout="button_count" data-size="large")
-      a(target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore") Condividi
-
+        p Analisi completa su #[a(href="#", title="Vai alla pagina originale" target="_blank", rel="noopener noreferrer") Teleborsa]         
+  include ../../shared/ask_support/ask_support.pug
   div(class="news loading")
     h2 Rassegna Stampa #{stock.name}
     p Le #[em ultime notizie] sul titolo #{stock.name} prese in tempo reale dalle nostre fonti esterne.

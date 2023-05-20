@@ -7,7 +7,7 @@
   border: 1px solid var(--black);
 }
 
-#stock_info div:not(.share) h2 {
+#stock_info div h2 {
   border-bottom: 1px solid var(--gray);
   margin-top: var(--xxx-large-space)
 }
@@ -119,17 +119,6 @@
 
 #stock_info .info > p, #stock_info .analysis > p, #stock_info .news > p{
   margin-bottom: var(--normal-space);
-}
-
-#stock_info .share {
-  margin: var(--xx-large-space) 0;
-  background-color: var(--lighter-gray);
-  padding: var(--x-large-space);
-}
-#stock_info .share > div{
-  display: flex;
-  justify-content: center;
-  margin: var(--xx-large-space) 0;
 }
 
 @media screen and (max-width: 768px) {

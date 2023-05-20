@@ -1,0 +1,9 @@
+#support {
+  margin: var(--xx-large-space) 0;
+  padding: var(--x-large-space);
+}
+#support > div {
+  display: flex;
+  justify-content: center;
+  margin: var(--large-space) 0;
+}
