@@ -1,4 +1,4 @@
-header section:not(#supportme) {
+header section {
   padding: 5px var(--view-padding);
   display: flex;
   justify-content: space-between;
@@ -15,11 +15,12 @@ header section:nth-child(3) {
 
 
 #supportme {
+  display: block;
   padding: 5px var(--view-padding);
   text-align: center;
   border: 1px solid var(--red);
 }
 #supportme progress {
   margin: 0 auto;
-  width: 20%;
+  width: 50%;
 }

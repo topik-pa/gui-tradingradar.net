@@ -1,4 +1,5 @@
 #breadcrumbs {
+  justify-content: center;
   display: block;
   border-bottom: 1px solid rgba(62, 120, 232, 0.2);
   text-align: center;
