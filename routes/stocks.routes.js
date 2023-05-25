@@ -16,6 +16,7 @@ module.exports = app => {
 
   // GET dividend and judgment
   router.get('/stocks/divYield', stocks.getStocksList)
+  router.get('/stocks/lastDivDate', stocks.getStocksList)
   router.get('/stocks/lastJudgment', stocks.getStocksList)
 
   // GET ratings, med tendency and rsi stocks list

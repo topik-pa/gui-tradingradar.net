@@ -53,7 +53,8 @@ function printApiStocksInPage (apiCall) {
       $a.title = a.name
       $a.href = `/analisi/${encodeURI(a.name?.toLowerCase().replace(/ /g, '-'))}?isin=${a.isin}`
       const $span = document.createElement('span')
-      $span.innerText = Array.isArray(a[apiCall.key].value) ? a[apiCall.key].value.join(' - ') : a[apiCall.key].value
+      const innerText = Array.isArray(a[apiCall.key].value) ? a[apiCall.key].value.join(' - ') : a[apiCall.key].value
+      $span.innerText = innerText || ''
       $li.appendChild($a)
       $li.appendChild($span)
       $ul.appendChild($li)
