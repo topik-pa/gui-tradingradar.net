@@ -66,7 +66,7 @@ const apis = JSON.parse(sessionStorage.getItem('localapi')) || [
     category: 'api',
     name: 'lastJudgment',
     key: 'lastJudgment',
-    qp: '',
+    qp: 'order=desc',
     stocks: undefined,
     status: 'idle'
   },
