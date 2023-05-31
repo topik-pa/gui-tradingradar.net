@@ -18,16 +18,16 @@ async function print (data, $root) {
 
     const $td2 = document.createElement('td')
     $td2.classList.add('green')
-    $td2.innerText = stock.lastPrice.value
+    $td2.innerText = stock.lastPrice?.value
 
     const $td3 = document.createElement('td')
-    $td3.innerText = stock.mm20days.value
+    $td3.innerText = stock.mm20days?.value
 
     const $td4 = document.createElement('td')
-    $td4.innerText = stock.mm40days.value
+    $td4.innerText = stock.mm40days?.value
 
     const $td5 = document.createElement('td')
-    $td5.innerText = stock.mm100days.value
+    $td5.innerText = stock.mm100days?.value
 
     $tr.appendChild($td1)
     $tr.appendChild($td2)
@@ -50,16 +50,16 @@ async function print (data, $root) {
 
     const $td2 = document.createElement('td')
     $td2.classList.add('red')
-    $td2.innerText = stock.lastPrice.value
+    $td2.innerText = stock.lastPrice?.value
 
     const $td3 = document.createElement('td')
-    $td3.innerText = stock.mm20days.value
+    $td3.innerText = stock.mm20days?.value
 
     const $td4 = document.createElement('td')
-    $td4.innerText = stock.mm40days.value
+    $td4.innerText = stock.mm40days?.value
 
     const $td5 = document.createElement('td')
-    $td5.innerText = stock.mm100days.value
+    $td5.innerText = stock.mm100days?.value
 
     $tr.appendChild($td1)
     $tr.appendChild($td2)

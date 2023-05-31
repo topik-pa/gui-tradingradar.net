@@ -12,6 +12,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   overflow-x: auto;
+  align-items: flex-start;
 }
 
 #in-trend-stocks table th, td {
