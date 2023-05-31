@@ -4,7 +4,11 @@
 
 #in-trend-stocks table {
   margin-bottom: var(--x-large-space);
-  width: 48%;
+
+  max-height: 23rem;
+  display: block;
+  overflow: auto;
+  padding: 0 1rem;
 }
 
 #in-trend-stocks > div {

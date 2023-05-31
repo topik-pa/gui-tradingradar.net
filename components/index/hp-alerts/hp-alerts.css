@@ -18,7 +18,7 @@
 #hp-alerts h5 {
   font-style: italic;
 }
-#hp-alerts a {
+#hp-alerts a.stock {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,6 +29,10 @@
 }
 #hp-alerts p {
   height: 3.5rem;
+}
+
+#hp-alerts ul {
+  margin-bottom: var(--normal-space);
 }
 
 @media screen and (max-width: 1024px) {
