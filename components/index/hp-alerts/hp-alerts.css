@@ -35,6 +35,19 @@
   margin-bottom: var(--normal-space);
 }
 
+#hp-alerts ul.sameas {
+  height: 8rem;
+  overflow-y: auto;
+}
+#hp-alerts ul.sameas li{
+  margin-bottom: var(--normal-space);
+}
+.nores {
+  color: var(--gray);
+  text-align: center;
+  margin-top: var(--xx-large-space);
+}
+
 @media screen and (max-width: 1024px) {
   #hp-alerts .alert {
     width: 48%;
